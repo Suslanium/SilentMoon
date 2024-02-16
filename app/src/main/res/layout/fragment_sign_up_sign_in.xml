@@ -7,28 +7,29 @@
     android:background="@color/white"
     tools:context=".SignUpSignInFragment">
 
-    <View
-        android:id="@+id/bg_top"
+    <FrameLayout
+        android:id="@+id/sign_up_sign_in_bg_top"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:background="@color/sign_up_sign_in_bg"
-        app:layout_constraintBottom_toTopOf="@+id/bg"
+        app:layout_constraintBottom_toTopOf="@id/sign_up_sign_in_bg"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/bg"
+        android:id="@+id/sign_up_sign_in_bg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:adjustViewBounds="true"
         android:importantForAccessibility="no"
         android:scaleType="fitXY"
         android:src="@drawable/sing_up_sign_in_bg"
-        app:layout_constraintBottom_toTopOf="@+id/sign_up_button"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintBottom_toTopOf="@id/sign_up_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constrainedHeight="true"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/moon_logo"
@@ -41,7 +42,7 @@
         android:text="@string/moon"
         android:textColor="@color/primary_text"
         android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@+id/logo"
+        app:layout_constraintStart_toEndOf="@id/logo"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -55,7 +56,7 @@
         android:text="@string/silent"
         android:textColor="@color/primary_text"
         android:textSize="16sp"
-        app:layout_constraintEnd_toStartOf="@+id/logo"
+        app:layout_constraintEnd_toStartOf="@id/logo"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
@@ -70,20 +71,21 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/welcome_image"
-        android:layout_width="wrap_content"
+        android:id="@+id/sign_up_sign_in_image"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="36dp"
         android:importantForAccessibility="no"
+        android:scaleType="fitCenter"
         android:src="@drawable/welcome_image"
-        app:layout_constraintBottom_toTopOf="@+id/welcome_title"
+        app:layout_constraintBottom_toTopOf="@id/sign_up_sign_in_title"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/welcome_title"
+        android:id="@+id/sign_up_sign_in_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -92,14 +94,14 @@
         android:text="@string/onboarding_title"
         android:textColor="@color/primary_text"
         android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="@+id/bg"
+        app:layout_constraintBottom_toBottomOf="@id/sign_up_sign_in_bg"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.68" />
 
     <TextView
-        android:id="@+id/welcome_message"
+        android:id="@+id/sign_up_sign_in_message"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -108,9 +110,9 @@
         android:textAlignment="center"
         android:textColor="@color/secondary_text"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@+id/welcome_title"
-        app:layout_constraintStart_toStartOf="@+id/welcome_title"
-        app:layout_constraintTop_toBottomOf="@+id/welcome_title" />
+        app:layout_constraintEnd_toEndOf="@id/sign_up_sign_in_title"
+        app:layout_constraintStart_toStartOf="@id/sign_up_sign_in_title"
+        app:layout_constraintTop_toBottomOf="@id/sign_up_sign_in_title" />
 
     <Button
         android:id="@+id/sign_up_button"
@@ -121,14 +123,18 @@
         android:layout_marginBottom="19dp"
         android:backgroundTint="@color/login_button_bg"
         android:fontFamily="@font/helvetica_neue_medium"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
         android:letterSpacing="0.05"
         android:text="@string/sign_up"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@id/sign_up_sign_in_bottom_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/sign_up_sign_in_bottom_text"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
@@ -137,8 +143,9 @@
         android:text="@string/sign_up_bottom_text"
         android:textAlignment="center"
         android:textColor="@color/secondary_text"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/sign_up_button"
-        app:layout_constraintStart_toStartOf="@+id/sign_up_button" />
+        app:layout_constraintEnd_toEndOf="@id/sign_up_button"
+        app:layout_constraintStart_toStartOf="@id/sign_up_button" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

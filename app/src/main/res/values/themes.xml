@@ -6,4 +6,9 @@
     </style>
 
     <style name="Theme.SilentMoon" parent="Base.Theme.SilentMoon" />
+
+    <style name="checkBoxStyle" parent="Base.Theme.AppCompat">
+        <item name="colorAccent">@color/checked_color</item>
+        <item name="android:textColorSecondary">@color/secondary_text</item>
+    </style>
 </resources>
