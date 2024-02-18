@@ -263,21 +263,22 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            app:constraint_referenced_ids="textView,checkBox2"
+            app:constraint_referenced_ids="privacy_policy_text,checkBox2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/password_field_sign_up" />
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/privacy_policy_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/roboto_regular"
             android:letterSpacing="0.05"
             android:lines="1"
             android:textColor="@color/secondary_text"
+            android:textColorHighlight="@color/transparent"
             android:textSize="14sp"
-            android:text="@string/privacy_policy_confirmation"
+            android:text="@string/privacy_policy_confirmation_part"
             tools:layout_editor_absoluteY="540dp" />
 
         <CheckBox

@@ -6,7 +6,8 @@
     <string name="onboarding_msg">Thousands of people are using silent moon for small meditations</string>
     <string name="sign_up">SIGN UP</string>
     <string name="log_in">LOG IN</string>
-    <string name="sign_up_bottom_text">ALREADY HAVE AN ACCOUNT? LOG IN</string>
+    <string name="sign_up_bottom_text_part">ALREADY HAVE AN ACCOUNT?</string>
+    <string name="sign_up_bottom_text_clickable_part">LOG IN</string>
     <string name="welcome_back">Welcome Back!</string>
     <string name="facebook_log_in">CONTINUE WITH FACEBOOK</string>
     <string name="google_log_in">CONTINUE WITH GOOGLE⠀⠀</string>
@@ -15,9 +16,12 @@
     <string name="email_hint">Email address</string>
     <string name="password_hint">Password</string>
     <string name="forgot_password">Forgot Password?</string>
-    <string name="log_in_bottom_text">DON\'T HAVE AN ACCOUNT? SIGN UP</string>
+    <string name="log_in_bottom_text_part">DON\'T HAVE AN ACCOUNT?</string>
+    <string name="log_in_bottom_text_clickable_part">SIGN UP</string>
     <string name="create_account">Create your account</string>
-    <string name="privacy_policy_confirmation">I HAVE READ THE PRIVACY POLICY</string>
+    <string name="privacy_policy_confirmation_part">I HAVE READ THE</string>
+    <string name="privacy_policy_confirmation_clickable_part">PRIVACY POLICY</string>
     <string name="get_started">GET STARTED</string>
     <string name="name_hint">Name</string>
+    <string name="privacy_policy_stub">Тут будет политика конфиденциальности</string>
 </resources>

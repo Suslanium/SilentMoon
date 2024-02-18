@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/fragmentContainerView"
-    android:name="com.suslanium.silentmoon.SignUpFragment"
+    android:name="com.suslanium.silentmoon.SignUpSignInFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_constraintBottom_toBottomOf="parent"
@@ -11,4 +11,4 @@
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent"
     tools:context=".MainActivity"
-    tools:layout="@layout/fragment_sign_up" />
+    tools:layout="@layout/fragment_sign_up_sign_in" />
