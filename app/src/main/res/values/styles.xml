@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="primary_button">
+        <item name="android:backgroundTint">@color/login_button_bg</item>
+        <item name="android:fontFamily">@font/helvetica_neue_medium</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:letterSpacing">0.05</item>
+        <item name="android:lineSpacingExtra">1sp</item>
+        <item name="android:lines">1</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="facebook_button" parent="primary_button">
+        <item name="android:backgroundTint">@color/facebook</item>
+        <item name="android:paddingStart">29dp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="icon">@drawable/facebook_logo</item>
+        <item name="iconPadding">@dimen/margin_regular</item>
+        <item name="iconSize">24dp</item>
+        <item name="iconTint">@color/white</item>
+    </style>
+
+    <style name="google_button" parent="primary_button">
+        <item name="android:backgroundTint">@color/transparent</item>
+        <item name="android:paddingStart">29dp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColor">@color/primary_text</item>
+        <item name="icon">@drawable/google_logo</item>
+        <item name="iconPadding">@dimen/margin_regular</item>
+        <item name="iconSize">24dp</item>
+        <item name="iconTint">@color/transparent</item>
+        <item name="iconTintMode">add</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="strokeColor">@color/border_color</item>
+    </style>
+
+    <style name="credentials_field">
+        <item name="boxBackgroundColor">@color/credentials_field_fill</item>
+        <item name="boxBackgroundMode">filled</item>
+        <item name="boxCornerRadiusBottomStart">15dp</item>
+        <item name="boxCornerRadiusBottomEnd">15dp</item>
+        <item name="boxCornerRadiusTopStart">15dp</item>
+        <item name="boxCornerRadiusTopEnd">15dp</item>
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="boxStrokeWidthFocused">0dp</item>
+        <item name="hintEnabled">false</item>
+    </style>
+
+    <style name="credentials_field_edit_text">
+        <item name="android:fontFamily">@font/helvetica_neue_roman</item>
+        <item name="android:letterSpacing">0.05</item>
+        <item name="android:lineSpacingExtra">1sp</item>
+        <item name="android:lines">1</item>
+        <item name="android:paddingStart">17dp</item>
+        <item name="android:paddingEnd">17dp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">@color/primary_text</item>
+        <item name="android:textColorHint">@color/secondary_text</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+</resources>
