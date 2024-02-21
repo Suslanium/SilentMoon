@@ -14,6 +14,8 @@ import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.fragment.app.Fragment
 import com.suslanium.silentmoon.databinding.FragmentSignUpBinding
+import com.suslanium.silentmoon.utils.InsetListeners
+import com.suslanium.silentmoon.utils.navigateToFragment
 
 class SignUpFragment : Fragment() {
 

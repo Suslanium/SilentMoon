@@ -1,7 +1,8 @@
-package com.suslanium.silentmoon
+package com.suslanium.silentmoon.utils
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
+import com.suslanium.silentmoon.R
 
 fun FragmentManager.navigateToFragment(fragment: Class<out Fragment>, fragmentContainerViewId: Int = R.id.fragmentContainerView) = this.beginTransaction()
     .setReorderingAllowed(true).setCustomAnimations(

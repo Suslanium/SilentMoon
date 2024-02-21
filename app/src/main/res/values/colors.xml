@@ -10,8 +10,13 @@
     <color name="transparent">#00FFFFFF</color>
     <color name="very_light_gray">#EBEAEC</color>
     <color name="credentials_field_fill">#F2F3F7</color>
-    <color name="checked_color">#6CB28E</color>
+    <color name="light_green">#6CB28E</color>
     <color name="welcome_screen_bg">#8C96FF</color>
     <color name="welcome_screen_text">#E3E5FE</color>
     <color name="light_yellow">#FFECCC</color>
+    <color name="light_red">#FA6E5A</color>
+    <color name="topic_performance_title_color">#FEF9F3</color>
+    <color name="topic_happiness_bg_color">#FEB18F</color>
+    <color name="topic_anxiety_bg_color">#FFCF86</color>
+    <color name="topic_productivity_bg_color">#D9A5B5</color>
 </resources>

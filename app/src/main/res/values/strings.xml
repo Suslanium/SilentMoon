@@ -24,6 +24,16 @@
     <string name="get_started">GET STARTED</string>
     <string name="name_hint">Name</string>
     <string name="privacy_policy_stub">Тут будет политика конфиденциальности</string>
-    <string name="welcome_top_msg"><b>Hi Afsar, Welcome</b> <br/> to Silent Moon</string>
+    <string name="welcome_top_msg"><b>Hi Afsar, Welcome</b> <br /> to Silent Moon</string>
     <string name="welcome_bottom_msg">Explore the app, Find some peace of mind to prepare for meditation.</string>
+    <string name="choose_topic_top_title"><b>What Brings you</b>
+to Silent Moon?</string>
+    <string name="choose_topic_top_subtitle">choose a topic to focus on:</string>
+    <string name="topic_stress">Reduce Stress</string>
+    <string name="topic_performance">Improve Performance</string>
+    <string name="topic_happiness">Increase Happiness</string>
+    <string name="topic_anxiety">Reduce Anxiety</string>
+    <string name="topic_growth">Personal Growth</string>
+    <string name="topic_sleep">Better Sleep</string>
+    <string name="topic_productivity">Increase Productivity</string>
 </resources>

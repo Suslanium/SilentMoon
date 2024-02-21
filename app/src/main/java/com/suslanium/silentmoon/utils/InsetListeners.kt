@@ -1,4 +1,4 @@
-package com.suslanium.silentmoon
+package com.suslanium.silentmoon.utils
 
 import android.view.ViewGroup
 import androidx.core.view.OnApplyWindowInsetsListener

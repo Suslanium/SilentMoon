@@ -6,7 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.view.ViewCompat
 import androidx.fragment.app.Fragment
+import com.suslanium.silentmoon.choosetopic.ChooseTopicFragment
 import com.suslanium.silentmoon.databinding.FragmentWelcomeBinding
+import com.suslanium.silentmoon.utils.InsetListeners
+import com.suslanium.silentmoon.utils.navigateToFragment
 
 class WelcomeFragment : Fragment() {
     private var _binding: FragmentWelcomeBinding? = null
@@ -24,6 +27,9 @@ class WelcomeFragment : Fragment() {
             binding.welcomeBottomInset,
             InsetListeners.heightBottomListener
         )
+        binding.welcomeButton.setOnClickListener {
+            parentFragmentManager.navigateToFragment(ChooseTopicFragment::class.java)
+        }
         return binding.root
     }
 }

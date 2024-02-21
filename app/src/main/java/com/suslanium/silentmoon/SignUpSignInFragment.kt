@@ -13,6 +13,8 @@ import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import com.suslanium.silentmoon.databinding.FragmentSignUpSignInBinding
+import com.suslanium.silentmoon.utils.InsetListeners
+import com.suslanium.silentmoon.utils.navigateToFragment
 
 class SignUpSignInFragment : Fragment() {
 
