@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="primary_button">
-        <item name="android:backgroundTint">@color/login_button_bg</item>
+        <item name="android:backgroundTint">@color/light_blue</item>
         <item name="android:fontFamily">@font/helvetica_neue_medium</item>
         <item name="android:textColor">@color/white</item>
         <item name="android:insetTop">0dp</item>
@@ -33,7 +33,7 @@
         <item name="iconTint">@color/transparent</item>
         <item name="iconTintMode">add</item>
         <item name="strokeWidth">1dp</item>
-        <item name="strokeColor">@color/border_color</item>
+        <item name="strokeColor">@color/very_light_gray</item>
     </style>
 
     <style name="credentials_field">

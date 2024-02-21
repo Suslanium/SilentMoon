@@ -24,8 +24,12 @@ class SignInFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentSignInBinding.inflate(inflater, container, false)
-        ViewCompat.setOnApplyWindowInsetsListener(binding.signInTopMsg, InsetListeners.topListener)
-        ViewCompat.setOnApplyWindowInsetsListener(binding.signInBottomText, InsetListeners.bottomListener)
+        ViewCompat.setOnApplyWindowInsetsListener(binding.signInTopMsg, InsetListeners.marginTopListener)
+        ViewCompat.setOnApplyWindowInsetsListener(binding.signInBottomText, InsetListeners.marginBottomListener)
+
+        binding.logInButton.setOnClickListener {
+            parentFragmentManager.navigateToFragment(WelcomeFragment::class.java)
+        }
 
         val nonClickableStringPart = ContextCompat.getString(requireContext(), R.string.log_in_bottom_text_part)
         val clickableStringPart = ContextCompat.getString(requireContext(), R.string.log_in_bottom_text_clickable_part)
@@ -34,7 +38,7 @@ class SignInFragment : Fragment() {
             override fun updateDrawState(ds: TextPaint) {
                 super.updateDrawState(ds)
                 ds.isUnderlineText = false
-                ds.color = ContextCompat.getColor(requireContext(), R.color.login_button_bg)
+                ds.color = ContextCompat.getColor(requireContext(), R.color.light_blue)
             }
 
             override fun onClick(p0: View) {

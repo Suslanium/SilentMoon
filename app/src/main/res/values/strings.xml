@@ -24,4 +24,6 @@
     <string name="get_started">GET STARTED</string>
     <string name="name_hint">Name</string>
     <string name="privacy_policy_stub">Тут будет политика конфиденциальности</string>
+    <string name="welcome_top_msg"><b>Hi Afsar, Welcome</b> <br/> to Silent Moon</string>
+    <string name="welcome_bottom_msg">Explore the app, Find some peace of mind to prepare for meditation.</string>
 </resources>

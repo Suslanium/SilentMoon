@@ -25,8 +25,12 @@ class SignUpFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentSignUpBinding.inflate(inflater, container, false)
-        ViewCompat.setOnApplyWindowInsetsListener(binding.signUpTopMsg, InsetListeners.topListener)
-        ViewCompat.setOnApplyWindowInsetsListener(binding.getStartedSignUpButton, InsetListeners.bottomListener)
+        ViewCompat.setOnApplyWindowInsetsListener(binding.signUpTopMsg, InsetListeners.marginTopListener)
+        ViewCompat.setOnApplyWindowInsetsListener(binding.getStartedSignUpButton, InsetListeners.marginBottomListener)
+
+        binding.getStartedSignUpButton.setOnClickListener {
+            parentFragmentManager.navigateToFragment(WelcomeFragment::class.java)
+        }
 
         val nonClickableStringPart = ContextCompat.getString(requireContext(), R.string.privacy_policy_confirmation_part)
         val clickableStringPart = ContextCompat.getString(requireContext(), R.string.privacy_policy_confirmation_clickable_part)

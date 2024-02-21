@@ -5,10 +5,13 @@
     <color name="primary_text">#3F414E</color>
     <color name="secondary_text">#A1A4B2</color>
     <color name="sign_up_sign_in_bg">#FAF8F5</color>
-    <color name="login_button_bg">#8E97FD</color>
+    <color name="light_blue">#8E97FD</color>
     <color name="facebook">#7583CA</color>
     <color name="transparent">#00FFFFFF</color>
-    <color name="border_color">#EBEAEC</color>
+    <color name="very_light_gray">#EBEAEC</color>
     <color name="credentials_field_fill">#F2F3F7</color>
     <color name="checked_color">#6CB28E</color>
+    <color name="welcome_screen_bg">#8C96FF</color>
+    <color name="welcome_screen_text">#E3E5FE</color>
+    <color name="light_yellow">#FFECCC</color>
 </resources>

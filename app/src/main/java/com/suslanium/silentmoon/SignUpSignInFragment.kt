@@ -23,12 +23,12 @@ class SignUpSignInFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View {
         _binding = FragmentSignUpSignInBinding.inflate(inflater, container, false)
-        ViewCompat.setOnApplyWindowInsetsListener(binding.logo, InsetListeners.topListener)
-        ViewCompat.setOnApplyWindowInsetsListener(binding.silentLogo, InsetListeners.topListener)
-        ViewCompat.setOnApplyWindowInsetsListener(binding.moonLogo, InsetListeners.topListener)
+        ViewCompat.setOnApplyWindowInsetsListener(binding.logo, InsetListeners.marginTopListener)
+        ViewCompat.setOnApplyWindowInsetsListener(binding.silentLogo, InsetListeners.marginTopListener)
+        ViewCompat.setOnApplyWindowInsetsListener(binding.moonLogo, InsetListeners.marginTopListener)
         ViewCompat.setOnApplyWindowInsetsListener(
             binding.signUpSignInBottomText,
-            InsetListeners.bottomListener
+            InsetListeners.marginBottomListener
         )
 
         binding.signUpButton.setOnClickListener {
@@ -42,7 +42,7 @@ class SignUpSignInFragment : Fragment() {
             override fun updateDrawState(ds: TextPaint) {
                 super.updateDrawState(ds)
                 ds.isUnderlineText = false
-                ds.color = ContextCompat.getColor(requireContext(), R.color.login_button_bg)
+                ds.color = ContextCompat.getColor(requireContext(), R.color.light_blue)
             }
 
             override fun onClick(p0: View) {

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_blue"
+    android:fillViewport="true"
+    tools:context=".WelcomeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/welcome_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="-100dp"
+            android:adjustViewBounds="true"
+            android:importantForAccessibility="no"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toTopOf="@+id/welcome_bottom_bg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/welcome_screen_bg" />
+
+        <ImageView
+            android:id="@+id/welcome_foreground"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:importantForAccessibility="no"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toTopOf="@+id/welcome_bottom_bg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/welcome_foreground" />
+
+        <View
+            android:id="@+id/welcome_bottom_bg"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@color/welcome_screen_bg"
+            app:layout_constraintBottom_toTopOf="@+id/welcome_bottom_inset"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <View
+            android:id="@+id/welcome_bottom_inset"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/welcome_button"
+            style="@style/primary_button"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/text_field_height"
+            android:layout_marginStart="@dimen/margin_regular"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="@dimen/margin_regular"
+            android:backgroundTint="@color/very_light_gray"
+            android:text="@string/get_started"
+            android:textColor="@color/primary_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/welcome_bottom_bg" />
+
+        <TextView
+            android:id="@+id/moon_logo_welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/airbnb_cereal_bold"
+            android:letterSpacing="0.24"
+            android:paddingTop="29dp"
+            android:text="@string/moon"
+            android:textColor="@color/welcome_screen_text"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@id/logo_welcome"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/silent_logo_welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="@font/airbnb_cereal_bold"
+            android:letterSpacing="0.24"
+            android:paddingTop="29dp"
+            android:text="@string/silent"
+            android:textColor="@color/welcome_screen_text"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@id/logo_welcome"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/logo_welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:importantForAccessibility="no"
+            android:paddingTop="@dimen/margin_regular"
+            android:src="@drawable/logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_regular"
+            android:layout_marginTop="@dimen/margin_regular"
+            android:layout_marginEnd="@dimen/margin_regular"
+            android:breakStrategy="balanced"
+            android:fontFamily="@font/roboto_medium"
+            android:letterSpacing="0.01"
+            android:text="@string/welcome_top_msg"
+            android:textAlignment="center"
+            android:textColor="@color/light_yellow"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/logo_welcome" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_regular"
+            android:layout_marginTop="@dimen/margin_regular"
+            android:layout_marginEnd="@dimen/margin_regular"
+            android:fontFamily="@font/roboto_regular"
+            android:text="@string/welcome_bottom_msg"
+            android:textAlignment="center"
+            android:textColor="@color/very_light_gray"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/welcome_foreground"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            app:layout_constraintVertical_bias="0.0" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
