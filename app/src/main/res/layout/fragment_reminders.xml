@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true"
+    android:textAlignment="center"
+    tools:context=".RemindersFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/reminders_title_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_small"
+            android:layout_marginEnd="80dp"
+            android:fontFamily="@font/roboto_bold"
+            android:paddingTop="27dp"
+            android:text="@string/reminders_title_time"
+            android:textColor="@color/primary_text"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/reminders_msg_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_regular"
+            android:layout_marginEnd="@dimen/margin_small"
+            android:fontFamily="@font/roboto_regular"
+            android:text="@string/reminders_subtitle_time"
+            android:textColor="@color/secondary_text"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@id/reminders_title_time"
+            app:layout_constraintTop_toBottomOf="@id/reminders_title_time" />
+
+        <TimePicker
+            android:id="@+id/reminders_time_picker"
+            android:layout_width="0dp"
+            android:layout_height="212dp"
+            android:layout_marginStart="@dimen/margin_regular"
+            android:layout_marginTop="@dimen/margin_regular"
+            android:layout_marginEnd="@dimen/margin_regular"
+            android:background="@drawable/time_picker_bg"
+            android:timePickerMode="spinner"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/reminders_msg_time" />
+
+        <TextView
+            android:id="@+id/reminders_title_days"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_small"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="80dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/reminders_title_days"
+            android:textColor="@color/primary_text"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/reminders_time_picker" />
+
+        <TextView
+            android:id="@+id/reminders_msg_days"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_regular"
+            android:layout_marginEnd="@dimen/margin_small"
+            android:fontFamily="@font/roboto_regular"
+            android:text="@string/reminders_subtitle_days"
+            android:textColor="@color/secondary_text"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@id/reminders_title_days"
+            app:layout_constraintTop_toBottomOf="@id/reminders_title_days" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_sunday"
+            style="@style/chip_day"
+            android:layout_width="@dimen/chip_day_size"
+            android:layout_height="@dimen/chip_day_size"
+            android:layout_marginTop="@dimen/margin_small"
+            android:text="@string/sunday"
+            app:layout_constraintEnd_toStartOf="@id/chip_monday"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/reminders_msg_days" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_monday"
+            style="@style/chip_day"
+            android:layout_width="@dimen/chip_day_size"
+            android:layout_height="@dimen/chip_day_size"
+            android:layout_marginTop="@dimen/margin_small"
+            android:text="@string/monday"
+            app:layout_constraintEnd_toStartOf="@id/chip_tuesday"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@id/chip_sunday"
+            app:layout_constraintTop_toBottomOf="@id/reminders_msg_days" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_tuesday"
+            style="@style/chip_day"
+            android:layout_width="@dimen/chip_day_size"
+            android:layout_height="@dimen/chip_day_size"
+            android:layout_marginTop="@dimen/margin_small"
+            android:text="@string/tuesday"
+            app:layout_constraintEnd_toStartOf="@id/chip_wednesday"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@id/chip_monday"
+            app:layout_constraintTop_toBottomOf="@id/reminders_msg_days" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_wednesday"
+            style="@style/chip_day"
+            android:layout_width="@dimen/chip_day_size"
+            android:layout_height="@dimen/chip_day_size"
+            android:layout_marginTop="@dimen/margin_small"
+            android:text="@string/wednesday"
+            app:layout_constraintEnd_toStartOf="@id/chip_thursday"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@id/chip_tuesday"
+            app:layout_constraintTop_toBottomOf="@id/reminders_msg_days" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_thursday"
+            style="@style/chip_day"
+            android:layout_width="@dimen/chip_day_size"
+            android:layout_height="@dimen/chip_day_size"
+            android:layout_marginTop="@dimen/margin_small"
+            android:text="@string/thursday"
+            app:layout_constraintEnd_toStartOf="@id/chip_friday"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@id/chip_wednesday"
+            app:layout_constraintTop_toBottomOf="@id/reminders_msg_days" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_friday"
+            style="@style/chip_day"
+            android:layout_width="@dimen/chip_day_size"
+            android:layout_height="@dimen/chip_day_size"
+            android:layout_marginTop="@dimen/margin_small"
+            android:text="@string/friday"
+            app:layout_constraintEnd_toStartOf="@id/chip_saturday"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@id/chip_thursday"
+            app:layout_constraintTop_toBottomOf="@id/reminders_msg_days" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_saturday"
+            style="@style/chip_day"
+            android:layout_width="@dimen/chip_day_size"
+            android:layout_height="@dimen/chip_day_size"
+            android:layout_marginTop="@dimen/margin_small"
+            android:text="@string/saturday"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@id/chip_friday"
+            app:layout_constraintTop_toBottomOf="@id/reminders_msg_days" />
+
+        <Button
+            android:id="@+id/save_button"
+            style="@style/primary_button"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/text_field_height"
+            android:layout_marginStart="@dimen/margin_regular"
+            android:layout_marginTop="27dp"
+            android:layout_marginEnd="@dimen/margin_regular"
+            android:layout_marginBottom="@dimen/margin_regular"
+            android:text="@string/save"
+            app:layout_constraintBottom_toTopOf="@id/reminders_bottom_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/chip_wednesday"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/reminders_bottom_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular"
+            android:letterSpacing="0.05"
+            android:paddingBottom="32dp"
+            android:text="@string/no_thanks"
+            android:textColor="@color/primary_text"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

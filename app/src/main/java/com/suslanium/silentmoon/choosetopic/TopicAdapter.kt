@@ -14,13 +14,19 @@ import com.suslanium.silentmoon.databinding.TopicViewholderBinding
 import com.suslanium.silentmoon.utils.Utils
 
 
-class TopicAdapter(private val topics: List<TopicInfo>) :
+class TopicAdapter(private val topics: List<TopicInfo>, private val onItemClick: () -> Unit) :
     RecyclerView.Adapter<TopicAdapter.TopicViewHolder>() {
 
     private lateinit var context: Context
 
     inner class TopicViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         private val binding = TopicViewholderBinding.bind(view)
+
+        init {
+            binding.root.setOnClickListener {
+                onItemClick()
+            }
+        }
 
         fun bind(topicInfo: TopicInfo) = with(binding) {
             val layoutParams = FrameLayout.LayoutParams(
@@ -32,7 +38,7 @@ class TopicAdapter(private val topics: List<TopicInfo>) :
             layoutParams.updateMargins(
                 left = context.resources.getDimensionPixelSize(R.dimen.topic_item_horizontal_margin),
                 right = context.resources.getDimensionPixelSize(R.dimen.topic_item_horizontal_margin),
-                bottom = context.resources.getDimensionPixelSize(R.dimen.topic_item_bottom_margin)
+                bottom = context.resources.getDimensionPixelSize(R.dimen.margin_small)
             )
             binding.topicHolderRoot.layoutParams = layoutParams
             binding.topicHolderRoot.backgroundTintList = context.getColorStateList(topicInfo.topicBackgroundColorId)

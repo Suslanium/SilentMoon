@@ -60,4 +60,21 @@
         <item name="android:textColorHint">@color/secondary_text</item>
         <item name="android:textSize">16sp</item>
     </style>
+
+    <style name="chip_day">
+        <item name="android:checkable">true</item>
+        <item name="android:fontFamily">@font/helvetica_neue_medium</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColor">@color/chip_day_text</item>
+        <item name="android:textSize">14sp</item>
+        <item name="checkedIcon">@null</item>
+        <item name="chipBackgroundColor">@color/chip_day_bg</item>
+        <item name="chipCornerRadius">100dp</item>
+        <item name="chipIconVisible">false</item>
+        <item name="chipMinTouchTargetSize">0dp</item>
+        <item name="chipStrokeColor">@color/chip_day_stroke</item>
+        <item name="chipStrokeWidth">1dp</item>
+        <item name="textEndPadding">0dp</item>
+        <item name="textStartPadding">0dp</item>
+    </style>
 </resources>

@@ -36,4 +36,17 @@ to Silent Moon?</string>
     <string name="topic_growth">Personal Growth</string>
     <string name="topic_sleep">Better Sleep</string>
     <string name="topic_productivity">Increase Productivity</string>
+    <string name="reminders_title_time">What time would you like to meditate?</string>
+    <string name="reminders_subtitle_time">You can choose any time, but we recommend doing it first thing in the morning.</string>
+    <string name="reminders_title_days">What days would you like to meditate?</string>
+    <string name="reminders_subtitle_days">We recommend choosing at least five, preferably every day.</string>
+    <string name="save">SAVE</string>
+    <string name="no_thanks">NO THANKS</string>
+    <string name="sunday">SU</string>
+    <string name="monday">M</string>
+    <string name="tuesday">T</string>
+    <string name="wednesday">W</string>
+    <string name="thursday">TH</string>
+    <string name="friday">F</string>
+    <string name="saturday">S</string>
 </resources>

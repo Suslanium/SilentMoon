@@ -120,7 +120,7 @@
             android:layout_marginEnd="@dimen/margin_regular"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/name_field"
+            app:layout_constraintTop_toBottomOf="@id/name_field"
             style="@style/credentials_field">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -170,7 +170,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/flow"
+            app:layout_constraintTop_toBottomOf="@id/flow"
             app:layout_constraintVertical_bias="1.0"
             style="@style/primary_button"/>
 
@@ -182,7 +182,7 @@
             app:constraint_referenced_ids="privacy_policy_text,checkBox2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/password_field_sign_up" />
+            app:layout_constraintTop_toBottomOf="@id/password_field_sign_up" />
 
         <TextView
             android:id="@+id/privacy_policy_text"

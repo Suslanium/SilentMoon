@@ -20,7 +20,7 @@
             android:adjustViewBounds="true"
             android:importantForAccessibility="no"
             android:scaleType="fitXY"
-            app:layout_constraintBottom_toTopOf="@+id/welcome_bottom_bg"
+            app:layout_constraintBottom_toTopOf="@id/welcome_bottom_bg"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:srcCompat="@drawable/welcome_screen_bg" />
@@ -32,7 +32,7 @@
             android:adjustViewBounds="true"
             android:importantForAccessibility="no"
             android:scaleType="fitXY"
-            app:layout_constraintBottom_toTopOf="@+id/welcome_bottom_bg"
+            app:layout_constraintBottom_toTopOf="@id/welcome_bottom_bg"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:srcCompat="@drawable/welcome_foreground" />
@@ -42,7 +42,7 @@
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:background="@color/welcome_screen_bg"
-            app:layout_constraintBottom_toTopOf="@+id/welcome_bottom_inset"
+            app:layout_constraintBottom_toTopOf="@id/welcome_bottom_inset"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
@@ -67,7 +67,7 @@
             android:textColor="@color/primary_text"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/welcome_bottom_bg" />
+            app:layout_constraintTop_toTopOf="@id/welcome_bottom_bg" />
 
         <TextView
             android:id="@+id/moon_logo_welcome"
@@ -124,7 +124,7 @@
             android:textSize="30sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/logo_welcome" />
+            app:layout_constraintTop_toBottomOf="@id/logo_welcome" />
 
         <TextView
             android:id="@+id/textView2"
@@ -138,10 +138,10 @@
             android:textAlignment="center"
             android:textColor="@color/very_light_gray"
             android:textSize="16sp"
-            app:layout_constraintBottom_toTopOf="@+id/welcome_foreground"
+            app:layout_constraintBottom_toTopOf="@id/welcome_foreground"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView"
+            app:layout_constraintTop_toBottomOf="@id/textView"
             app:layout_constraintVertical_bias="0.0" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>

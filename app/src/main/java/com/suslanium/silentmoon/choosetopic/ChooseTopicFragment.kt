@@ -7,8 +7,10 @@ import android.view.ViewGroup
 import androidx.core.view.ViewCompat
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
+import com.suslanium.silentmoon.RemindersFragment
 import com.suslanium.silentmoon.databinding.FragmentChooseTopicBinding
 import com.suslanium.silentmoon.utils.InsetListeners
+import com.suslanium.silentmoon.utils.navigateToFragment
 
 
 class ChooseTopicFragment : Fragment() {
@@ -23,7 +25,9 @@ class ChooseTopicFragment : Fragment() {
         _binding = FragmentChooseTopicBinding.inflate(inflater, container, false)
         ViewCompat.setOnApplyWindowInsetsListener(binding.chooseTopicTitle, InsetListeners.marginTopListener)
         val viewManager = StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
-        val viewAdapter = TopicAdapter(Topics.topicList)
+        val viewAdapter = TopicAdapter(Topics.topicList, onItemClick = {
+            parentFragmentManager.navigateToFragment(RemindersFragment::class.java)
+        })
         binding.chooseTopicRecyclerView.apply {
             setHasFixedSize(true)
             layoutManager = viewManager
