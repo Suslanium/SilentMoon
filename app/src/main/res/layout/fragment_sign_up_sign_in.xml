@@ -1,146 +1,155 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
+    android:fillViewport="true"
+    android:textAlignment="center"
     tools:context=".SignUpSignInFragment">
 
-    <FrameLayout
-        android:id="@+id/sign_up_sign_in_bg_top"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:background="@color/sign_up_sign_in_bg"
-        app:layout_constraintBottom_toTopOf="@id/sign_up_sign_in_bg"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="wrap_content">
 
-    <ImageView
-        android:id="@+id/sign_up_sign_in_bg"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:adjustViewBounds="true"
-        android:importantForAccessibility="no"
-        android:scaleType="fitXY"
-        android:src="@drawable/sing_up_sign_in_bg"
-        app:layout_constrainedHeight="true"
-        app:layout_constraintBottom_toTopOf="@id/sign_up_button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <FrameLayout
+            android:id="@+id/sign_up_sign_in_bg_top"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/sign_up_sign_in_bg"
+            app:layout_constraintBottom_toTopOf="@id/sign_up_sign_in_bg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/moon_logo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:fontFamily="@font/airbnb_cereal_bold"
-        android:letterSpacing="0.24"
-        android:paddingTop="29dp"
-        android:text="@string/moon"
-        android:textColor="@color/primary_text"
-        android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@id/logo"
-        app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:id="@+id/sign_up_sign_in_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:importantForAccessibility="no"
+            android:scaleType="fitXY"
+            android:src="@drawable/sing_up_sign_in_bg"
+            app:layout_constrainedHeight="true"
+            app:layout_constraintBottom_toTopOf="@id/sign_up_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/silent_logo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="10dp"
-        android:fontFamily="@font/airbnb_cereal_bold"
-        android:letterSpacing="0.24"
-        android:paddingTop="29dp"
-        android:text="@string/silent"
-        android:textColor="@color/primary_text"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toStartOf="@id/logo"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/moon_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/airbnb_cereal_bold"
+            android:letterSpacing="0.24"
+            android:paddingTop="29dp"
+            android:text="@string/moon"
+            android:textColor="@color/primary_text"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@id/logo"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/logo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:importantForAccessibility="no"
-        android:paddingTop="@dimen/margin_regular"
-        android:src="@drawable/logo_light"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/silent_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="@font/airbnb_cereal_bold"
+            android:letterSpacing="0.24"
+            android:paddingTop="29dp"
+            android:text="@string/silent"
+            android:textColor="@color/primary_text"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@id/logo"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/sign_up_sign_in_image"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/margin_medium"
-        android:layout_marginEnd="@dimen/margin_medium"
-        android:layout_marginBottom="36dp"
-        android:importantForAccessibility="no"
-        android:scaleType="fitCenter"
-        android:src="@drawable/welcome_image"
-        app:layout_constraintBottom_toTopOf="@id/sign_up_sign_in_title"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:importantForAccessibility="no"
+            android:paddingTop="@dimen/margin_regular"
+            android:src="@drawable/logo_light"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/sign_up_sign_in_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/margin_medium"
-        android:layout_marginEnd="@dimen/margin_medium"
-        android:fontFamily="@font/roboto_bold"
-        android:text="@string/onboarding_title"
-        android:textColor="@color/primary_text"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="@id/sign_up_sign_in_bg"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.68" />
+        <ImageView
+            android:id="@+id/sign_up_sign_in_image"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_marginEnd="@dimen/margin_medium"
+            android:layout_marginBottom="36dp"
+            android:importantForAccessibility="no"
+            android:scaleType="fitCenter"
+            android:src="@drawable/welcome_image"
+            app:layout_constraintBottom_toTopOf="@id/sign_up_sign_in_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/logo"
+            app:layout_constraintVertical_bias="1.0" />
 
-    <TextView
-        android:id="@+id/sign_up_sign_in_message"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:fontFamily="@font/roboto_regular"
-        android:text="@string/onboarding_msg"
-        android:textAlignment="center"
-        android:textColor="@color/secondary_text"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@id/sign_up_sign_in_title"
-        app:layout_constraintStart_toStartOf="@id/sign_up_sign_in_title"
-        app:layout_constraintTop_toBottomOf="@id/sign_up_sign_in_title" />
+        <TextView
+            android:id="@+id/sign_up_sign_in_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_marginEnd="@dimen/margin_medium"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/onboarding_title"
+            android:textColor="@color/primary_text"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="@id/sign_up_sign_in_bg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.68" />
 
-    <Button
-        android:id="@+id/sign_up_button"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/text_field_height"
-        android:layout_marginStart="@dimen/margin_medium"
-        android:layout_marginEnd="@dimen/margin_medium"
-        android:layout_marginBottom="19dp"
-        android:text="@string/sign_up"
-        app:layout_constraintBottom_toTopOf="@id/sign_up_sign_in_bottom_text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        style="@style/primary_button"/>
+        <TextView
+            android:id="@+id/sign_up_sign_in_message"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/roboto_regular"
+            android:text="@string/onboarding_msg"
+            android:textAlignment="center"
+            android:textColor="@color/secondary_text"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@id/sign_up_sign_in_title"
+            app:layout_constraintStart_toStartOf="@id/sign_up_sign_in_title"
+            app:layout_constraintTop_toBottomOf="@id/sign_up_sign_in_title" />
 
-    <TextView
-        android:id="@+id/sign_up_sign_in_bottom_text"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/roboto_regular"
-        android:letterSpacing="0.05"
-        android:paddingBottom="32dp"
-        android:text="@string/sign_up_bottom_text_part"
-        android:textAlignment="center"
-        android:textColor="@color/secondary_text"
-        android:textColorHighlight="@color/transparent"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@id/sign_up_button"
-        app:layout_constraintStart_toStartOf="@id/sign_up_button" />
+        <Button
+            android:id="@+id/sign_up_button"
+            style="@style/primary_button"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/text_field_height"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_marginEnd="@dimen/margin_medium"
+            android:layout_marginBottom="19dp"
+            android:text="@string/sign_up"
+            app:layout_constraintBottom_toTopOf="@id/sign_up_sign_in_bottom_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/sign_up_sign_in_bottom_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular"
+            android:letterSpacing="0.05"
+            android:paddingBottom="32dp"
+            android:text="@string/sign_up_bottom_text_part"
+            android:textAlignment="center"
+            android:textColor="@color/secondary_text"
+            android:textColorHighlight="@color/transparent"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/sign_up_button"
+            app:layout_constraintStart_toStartOf="@id/sign_up_button" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
