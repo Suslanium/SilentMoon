@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.FrameLayout
 import androidx.appcompat.content.res.AppCompatResources
-import androidx.core.view.updateMargins
 import androidx.core.view.updatePadding
 import androidx.recyclerview.widget.RecyclerView
 import com.suslanium.silentmoon.R
@@ -29,18 +28,10 @@ class TopicAdapter(private val topics: List<TopicInfo>, private val onItemClick:
         }
 
         fun bind(topicInfo: TopicInfo) = with(binding) {
-            val layoutParams = FrameLayout.LayoutParams(
-                context.resources.getDimensionPixelSize(R.dimen.topic_item_width),
-                if (topicInfo.isSmall) context.resources.getDimensionPixelSize(R.dimen.topic_item_small_height) else context.resources.getDimensionPixelSize(
-                    R.dimen.topic_item_height
-                )
+            val layoutParams = binding.topicHolderRoot.layoutParams as FrameLayout.LayoutParams
+            layoutParams.height = if (topicInfo.isSmall) context.resources.getDimensionPixelSize(R.dimen.topic_item_small_height) else context.resources.getDimensionPixelSize(
+                R.dimen.topic_item_height
             )
-            layoutParams.updateMargins(
-                left = context.resources.getDimensionPixelSize(R.dimen.topic_item_horizontal_margin),
-                right = context.resources.getDimensionPixelSize(R.dimen.topic_item_horizontal_margin),
-                bottom = context.resources.getDimensionPixelSize(R.dimen.margin_small)
-            )
-            binding.topicHolderRoot.layoutParams = layoutParams
             binding.topicHolderRoot.backgroundTintList = context.getColorStateList(topicInfo.topicBackgroundColorId)
             topicTitle.setTextColor(context.getColor(topicInfo.topicTitleColorId))
             topicTitle.text = context.getString(topicInfo.topicTitleId)
