@@ -28,4 +28,6 @@
     <color name="bottom_bar_inactive_color">#A0A3B1</color>
     <color name="relaxation_color">#FFC97E</color>
     <color name="daily_thought_bg">#333242</color>
+    <color name="course_details_fab_bg">#7F03174C</color>
+    <color name="course_details_fab_icon">#E6E7F2</color>
 </resources>

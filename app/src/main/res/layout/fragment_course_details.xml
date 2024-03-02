@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            app:toolbarId="@+id/toolbar"
+            app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed|snap"
+            app:layout_scrollInterpolator="@android:anim/decelerate_interpolator">
+
+            <ImageView
+                android:id="@+id/app_bar_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:src="@drawable/course_details_bg"
+                android:importantForAccessibility="no" />
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_height="0dp"
+                android:layout_width="match_parent"/>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|snap|enterAlways">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_marginTop="17dp"
+                android:fontFamily="@font/roboto_bold"
+                android:text="@string/happy_morning"
+                android:textColor="@color/primary_text"
+                android:textSize="34sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fav_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_marginEnd="85dp"
+        android:layout_marginTop="52dp"
+        android:importantForAccessibility="no"
+        android:src="@drawable/heart_icon"
+        app:tint="@null"
+        app:backgroundTint="@color/course_details_fab_bg"
+        app:elevation="0dp"
+        app:fabCustomSize="55dp"
+        app:layout_anchor="@id/appbar"
+        app:layout_anchorGravity="top|right|end"
+        app:shapeAppearanceOverlay="@style/fab_shape"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/download_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="52dp"
+        android:importantForAccessibility="no"
+        android:src="@drawable/download_icon"
+        app:tint="@null"
+        app:backgroundTint="@color/course_details_fab_bg"
+        app:elevation="0dp"
+        app:fabCustomSize="55dp"
+        app:layout_anchor="@id/appbar"
+        app:layout_anchorGravity="top|right|end"
+        app:shapeAppearanceOverlay="@style/fab_shape"/>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

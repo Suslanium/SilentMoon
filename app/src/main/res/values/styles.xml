@@ -83,6 +83,11 @@
         <item name="cornerSize">18dp</item>
     </style>
 
+    <style name="fab_shape" parent="">
+        <item name="cornerFamily">?attr/shapeCornerFamily</item>
+        <item name="cornerSize">100dp</item>
+    </style>
+
     <style name="bottom_bar_indicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
         <item name="android:width">46dp</item>
         <item name="android:height">46dp</item>
