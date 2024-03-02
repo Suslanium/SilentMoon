@@ -23,4 +23,5 @@
     <color name="time_picker_bg">#F5F5F9</color>
     <color name="time_picker_center_stroke">#E1E1E5</color>
     <color name="time_picker_selected">#263238</color>
+    <color name="bottom_bar_inactive_color">#A0A3B1</color>
 </resources>

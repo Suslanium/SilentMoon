@@ -49,4 +49,9 @@ to Silent Moon?</string>
     <string name="thursday">TH</string>
     <string name="friday">F</string>
     <string name="saturday">S</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_sleep">Sleep</string>
+    <string name="menu_meditate">Meditate</string>
+    <string name="menu_music">Music</string>
+    <string name="menu_profile">Profile</string>
 </resources>

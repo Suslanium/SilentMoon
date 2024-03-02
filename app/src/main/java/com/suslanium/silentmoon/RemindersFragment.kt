@@ -14,6 +14,7 @@ import androidx.fragment.app.Fragment
 import com.suslanium.silentmoon.databinding.FragmentRemindersBinding
 import com.suslanium.silentmoon.utils.InsetListeners
 import com.suslanium.silentmoon.utils.Utils
+import com.suslanium.silentmoon.utils.navigateToFragment
 
 
 class RemindersFragment : Fragment() {
@@ -28,6 +29,12 @@ class RemindersFragment : Fragment() {
         _binding = FragmentRemindersBinding.inflate(inflater, container, false)
         ViewCompat.setOnApplyWindowInsetsListener(binding.remindersTitleTime, InsetListeners.marginTopListener)
         ViewCompat.setOnApplyWindowInsetsListener(binding.remindersBottomText, InsetListeners.marginBottomListener)
+        binding.saveButton.setOnClickListener {
+            parentFragmentManager.navigateToFragment(BottomBarRootFragment::class.java)
+        }
+        binding.remindersBottomText.setOnClickListener {
+            parentFragmentManager.navigateToFragment(BottomBarRootFragment::class.java)
+        }
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
             setTimepickerTextColour(binding.remindersTimePicker)
         }
@@ -41,9 +48,9 @@ class RemindersFragment : Fragment() {
         val minuteNumberPickerId: Int = resources.getIdentifier("minute", "id", "android")
         val amPmNumberPickerId: Int = resources.getIdentifier("amPm", "id", "android")
 
-        val hourNumberPicker = timePicker.findViewById(hourNumberPickerId) as NumberPicker
-        val minuteNumberPicker = timePicker.findViewById(minuteNumberPickerId) as NumberPicker
-        val amPmNumberPicker = timePicker.findViewById(amPmNumberPickerId) as NumberPicker
+        val hourNumberPicker: NumberPicker = timePicker.findViewById(hourNumberPickerId)
+        val minuteNumberPicker: NumberPicker = timePicker.findViewById(minuteNumberPickerId)
+        val amPmNumberPicker: NumberPicker = timePicker.findViewById(amPmNumberPickerId)
 
         hourNumberPicker.textColor = requireContext().getColor(R.color.time_picker_selected)
         hourNumberPicker.textSize = Utils.spToPx(24f, requireContext()).toFloat()

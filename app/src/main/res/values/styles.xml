@@ -77,4 +77,27 @@
         <item name="textEndPadding">0dp</item>
         <item name="textStartPadding">0dp</item>
     </style>
+
+    <style name="indicator_shape" parent="">
+        <item name="cornerFamily">?attr/shapeCornerFamily</item>
+        <item name="cornerSize">18dp</item>
+    </style>
+
+    <style name="bottom_bar_indicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:width">46dp</item>
+        <item name="android:height">46dp</item>
+        <item name="android:color">@color/light_blue</item>
+        <item name="shapeAppearance">@style/indicator_shape</item>
+        <item name="marginHorizontal">0dp</item>
+    </style>
+
+    <style name="bottom_bar_text_appearance">
+        <item name="fontFamily">@font/roboto_medium</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
 </resources>
