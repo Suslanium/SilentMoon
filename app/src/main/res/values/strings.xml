@@ -54,4 +54,15 @@ to Silent Moon?</string>
     <string name="menu_meditate">Meditate</string>
     <string name="menu_music">Music</string>
     <string name="menu_profile">Profile</string>
+    <string name="home_title">Good Morning, Afsar</string>
+    <string name="home_subtitle">We wish you a good day</string>
+    <string name="basics">Basics</string>
+    <string name="relaxation">Relaxation</string>
+    <string name="daily_thought">Daily Thought</string>
+    <string name="course">COURSE</string>
+    <string name="music">MUSIC</string>
+    <string name="meditation">MEDITATION</string>
+    <string name="three_ten_minutes">3–10 MIN</string>
+    <string name="start">START</string>
+    <string name="meditation_three_ten">MEDITATION⠀3–10 MIN</string>
 </resources>

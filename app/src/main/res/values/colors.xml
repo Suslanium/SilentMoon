@@ -3,6 +3,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="primary_text">#3F414E</color>
+    <color name="primary_text_variant">#524F53</color>
     <color name="secondary_text">#A1A4B2</color>
     <color name="sign_up_sign_in_bg">#FAF8F5</color>
     <color name="light_blue">#8E97FD</color>
@@ -14,14 +15,17 @@
     <color name="welcome_screen_bg">#8C96FF</color>
     <color name="welcome_screen_text">#E3E5FE</color>
     <color name="light_yellow">#FFECCC</color>
+    <color name="light_yellow_variant">#F7E8D0</color>
     <color name="light_red">#FA6E5A</color>
     <color name="topic_performance_title_color">#FEF9F3</color>
     <color name="topic_happiness_bg_color">#FEB18F</color>
     <color name="topic_anxiety_bg_color">#FFCF86</color>
     <color name="topic_productivity_bg_color">#D9A5B5</color>
-    <color name="weekday_selected_text_color">#FEFFFE</color>
+    <color name="ultra_light_gray">#FEFFFE</color>
     <color name="time_picker_bg">#F5F5F9</color>
     <color name="time_picker_center_stroke">#E1E1E5</color>
     <color name="time_picker_selected">#263238</color>
     <color name="bottom_bar_inactive_color">#A0A3B1</color>
+    <color name="relaxation_color">#FFC97E</color>
+    <color name="daily_thought_bg">#333242</color>
 </resources>
