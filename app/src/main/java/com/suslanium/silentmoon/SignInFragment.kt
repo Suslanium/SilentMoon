@@ -52,4 +52,9 @@ class SignInFragment : Fragment() {
         binding.signInBottomText.movementMethod = LinkMovementMethod.getInstance()
         return binding.root
     }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
 }

@@ -59,4 +59,9 @@ class RemindersFragment : Fragment() {
         amPmNumberPicker.textColor = requireContext().getColor(R.color.time_picker_selected)
         amPmNumberPicker.textSize = Utils.spToPx(24f, requireContext()).toFloat()
     }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
 }

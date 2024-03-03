@@ -69,4 +69,14 @@ to Silent Moon?</string>
     <string name="focus">Focus</string>
     <string name="happiness">Happiness</string>
     <string name="happy_morning">Happy Morning</string>
+    <string name="happy_morning_details">Ease the mind into a restful night’s sleep with these deep, ambient tones.</string>
+    <string name="course_details_favourites">24.234 Favourites</string>
+    <string name="course_details_listening">34.234 Listening</string>
+    <string name="pick_a_narrator">Pick a Narrator</string>
+    <string name="male_voice">Male Voice</string>
+    <string name="female_voice">Female Voice</string>
+    <string name="min_formattable">%1$d MIN</string>
+    <string name="focus_attention">Focus Attention</string>
+    <string name="body_scan">Body Scan</string>
+    <string name="making_happiness">Making Happiness</string>
 </resources>

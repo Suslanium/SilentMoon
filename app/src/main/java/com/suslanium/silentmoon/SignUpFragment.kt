@@ -53,4 +53,9 @@ class SignUpFragment : Fragment() {
         binding.privacyPolicyText.movementMethod = LinkMovementMethod.getInstance()
         return binding.root
     }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
 }

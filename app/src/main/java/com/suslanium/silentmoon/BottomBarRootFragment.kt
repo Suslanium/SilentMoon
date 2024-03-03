@@ -22,4 +22,9 @@ class BottomBarRootFragment : Fragment() {
         ViewCompat.setOnApplyWindowInsetsListener(binding.bottomBar, InsetListeners.marginBottomListener)
         return binding.root
     }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
 }

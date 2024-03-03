@@ -4,7 +4,6 @@ import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.WindowCompat
-import com.suslanium.silentmoon.utils.navigateToFragment
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -12,6 +11,5 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         WindowCompat.getInsetsController(window, window.decorView.rootView).isAppearanceLightStatusBars = true
-        supportFragmentManager.navigateToFragment(CourseDetailsFragment::class.java)
     }
 }
