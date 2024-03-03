@@ -79,4 +79,7 @@ to Silent Moon?</string>
     <string name="focus_attention">Focus Attention</string>
     <string name="body_scan">Body Scan</string>
     <string name="making_happiness">Making Happiness</string>
+    <string name="seven_days_of_calm">7 Days Of Calm</string>
+    <string name="music_current_placeholder">01:30</string>
+    <string name="music_duration_placeholder">45:00</string>
 </resources>

@@ -7,8 +7,10 @@ import android.view.ViewGroup
 import androidx.core.view.ViewCompat
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.suslanium.silentmoon.MusicV2Fragment
 import com.suslanium.silentmoon.databinding.FragmentCourseTabBinding
 import com.suslanium.silentmoon.utils.InsetListeners
+import com.suslanium.silentmoon.utils.navigateToFragment
 
 class CourseTabFragment : Fragment() {
 
@@ -21,7 +23,9 @@ class CourseTabFragment : Fragment() {
     ): View {
         _binding = FragmentCourseTabBinding.inflate(inflater, container, false)
         val viewManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
-        val viewAdapter = CourseAudioAdapter(CourseAudio.courseAudioInfos, onItemClick = {})
+        val viewAdapter = CourseAudioAdapter(CourseAudio.courseAudioInfos, onItemClick = {
+            parentFragment?.parentFragmentManager?.navigateToFragment(MusicV2Fragment::class.java)
+        })
         binding.root.apply {
             setHasFixedSize(true)
             layoutManager = viewManager

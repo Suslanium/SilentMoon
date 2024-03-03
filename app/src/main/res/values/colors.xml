@@ -32,4 +32,7 @@
     <color name="course_details_fab_icon">#E6E7F2</color>
     <color name="course_details_list_divider">#ADB8D9</color>
     <color name="course_details_divider">#E4E6FD</color>
+    <color name="music_v2_background">#FAF7F2</color>
+    <color name="music_v2_fab_bg">#B6B8BF</color>
+    <color name="light_gray">#A0A3B1</color>
 </resources>
