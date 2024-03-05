@@ -35,4 +35,6 @@
     <color name="music_v2_background">#FAF7F2</color>
     <color name="music_v2_fab_bg">#B6B8BF</color>
     <color name="light_gray">#A0A3B1</color>
+    <color name="gray">#5A6175</color>
+    <color name="daily_calm_bg">#F1DDCF</color>
 </resources>

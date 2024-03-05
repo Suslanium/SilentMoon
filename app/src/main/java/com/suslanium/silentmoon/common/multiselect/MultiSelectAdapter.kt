@@ -32,19 +32,19 @@ class MultiSelectAdapter(private val items: List<MultiSelectItemInfo>) :
             }
         }
 
-        fun bind(multiSelectItemInfo: MultiSelectItemInfo, itemIndex: Int) {
-            binding.multiselectName.text = context.getString(multiSelectItemInfo.titleId)
-            binding.multiselectToggle.chipIcon = AppCompatResources.getDrawable(
+        fun bind(multiSelectItemInfo: MultiSelectItemInfo, itemIndex: Int) = with(binding) {
+            multiselectName.text = context.getString(multiSelectItemInfo.titleId)
+            multiselectToggle.chipIcon = AppCompatResources.getDrawable(
                 context, multiSelectItemInfo.iconId
             )
 
             this@MultiSelectViewHolder.itemIndex = itemIndex
             if (selectedItems.contains(itemIndex)) {
-                binding.multiselectName.setTextColor(context.getColor(R.color.primary_text))
-                binding.multiselectToggle.isChecked = true
+                multiselectName.setTextColor(context.getColor(R.color.primary_text))
+                multiselectToggle.isChecked = true
             } else {
-                binding.multiselectName.setTextColor(context.getColor(R.color.light_gray))
-                binding.multiselectToggle.isChecked = false
+                multiselectName.setTextColor(context.getColor(R.color.light_gray))
+                multiselectToggle.isChecked = false
             }
         }
     }

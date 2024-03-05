@@ -4,8 +4,8 @@
     <dimen name="margin_medium">30dp</dimen>
     <dimen name="text_field_height">63dp</dimen>
     <dimen name="topic_item_width">150dp</dimen>
-    <dimen name="topic_item_small_height">167dp</dimen>
-    <dimen name="topic_item_height">210dp</dimen>
+    <dimen name="item_small_height">167dp</dimen>
+    <dimen name="item_height">210dp</dimen>
     <dimen name="topic_item_horizontal_margin">10dp</dimen>
     <dimen name="margin_small">20dp</dimen>
     <dimen name="chip_day_size">40dp</dimen>

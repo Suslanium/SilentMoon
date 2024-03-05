@@ -29,8 +29,8 @@ class TopicAdapter(private val topics: List<TopicInfo>, private val onItemClick:
 
         fun bind(topicInfo: TopicInfo) = with(binding) {
             val layoutParams = binding.topicHolderRoot.layoutParams as FrameLayout.LayoutParams
-            layoutParams.height = if (topicInfo.isSmall) context.resources.getDimensionPixelSize(R.dimen.topic_item_small_height) else context.resources.getDimensionPixelSize(
-                R.dimen.topic_item_height
+            layoutParams.height = if (topicInfo.isSmall) context.resources.getDimensionPixelSize(R.dimen.item_small_height) else context.resources.getDimensionPixelSize(
+                R.dimen.item_height
             )
             binding.topicHolderRoot.backgroundTintList = context.getColorStateList(topicInfo.topicBackgroundColorId)
             topicTitle.setTextColor(context.getColor(topicInfo.topicTitleColorId))
