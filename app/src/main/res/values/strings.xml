@@ -82,4 +82,15 @@ to Silent Moon?</string>
     <string name="seven_days_of_calm">7 Days Of Calm</string>
     <string name="music_current_placeholder">01:30</string>
     <string name="music_duration_placeholder">45:00</string>
+    <string name="meditate_v2_subtitle">We can learn how to recognize when our minds are doing their normal everyday acrobatics.</string>
+    <string name="meditate_v2_menu_all">All</string>
+    <string name="meditate_v2_menu_my">My</string>
+    <string name="meditate_v2_menu_anxious">Anxious</string>
+    <string name="meditate_v2_menu_sleep">Sleep</string>
+    <string name="meditate_v2_menu_kids">Kids</string>
+    <string name="meditate_v2_title">Meditate</string>
+    <string name="daily_calm">Daily Calm</string>
+    <string name="apr_30">APR 30</string>
+    <string name="pause_practice">PAUSE PRACTICE</string>
+    <string name="anxiety_release">Anxiety Release</string>
 </resources>
