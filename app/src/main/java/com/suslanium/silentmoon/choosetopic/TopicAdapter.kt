@@ -4,10 +4,10 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.FrameLayout
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.core.view.updatePadding
 import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.suslanium.silentmoon.R
 import com.suslanium.silentmoon.databinding.TopicViewholderBinding
 import com.suslanium.silentmoon.utils.Utils
@@ -28,11 +28,11 @@ class TopicAdapter(private val topics: List<TopicInfo>, private val onItemClick:
         }
 
         fun bind(topicInfo: TopicInfo) = with(binding) {
-            val layoutParams = binding.topicHolderRoot.layoutParams as FrameLayout.LayoutParams
+            val layoutParams = root.layoutParams as StaggeredGridLayoutManager.LayoutParams
             layoutParams.height = if (topicInfo.isSmall) context.resources.getDimensionPixelSize(R.dimen.item_small_height) else context.resources.getDimensionPixelSize(
                 R.dimen.item_height
             )
-            binding.topicHolderRoot.backgroundTintList = context.getColorStateList(topicInfo.topicBackgroundColorId)
+            root.backgroundTintList = context.getColorStateList(topicInfo.topicBackgroundColorId)
             topicTitle.setTextColor(context.getColor(topicInfo.topicTitleColorId))
             topicTitle.text = context.getString(topicInfo.topicTitleId)
             topicImage.setImageDrawable(

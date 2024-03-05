@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.ConcatAdapter
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.suslanium.silentmoon.common.multiselect.MultiSelectAdapter
@@ -17,12 +18,12 @@ class MeditateV2Fragment : Fragment() {
     private val binding get() = _binding!!
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View {
         _binding = FragmentMeditateV2Binding.inflate(inflater, container, false)
 
-        val multiSelectViewManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+        val multiSelectViewManager =
+            LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
         val multiSelectViewAdapter = MultiSelectAdapter(MultiSelectItems.items)
 
         binding.meditateV2Multiselect.apply {
@@ -31,13 +32,14 @@ class MeditateV2Fragment : Fragment() {
             adapter = multiSelectViewAdapter
         }
 
-        val meditationViewManager = StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
+        val meditationViewManager =
+            StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
         val meditationViewAdapter = MeditationAdapter(Meditations.list)
 
         binding.meditateV2Recycler.apply {
             setHasFixedSize(true)
             layoutManager = meditationViewManager
-            adapter = meditationViewAdapter
+            adapter = ConcatAdapter(MeditationHeaderAdapter(), meditationViewAdapter)
         }
 
         return binding.root

@@ -3,8 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="@dimen/item_height"
-    android:layout_marginStart="10dp"
-    android:layout_marginEnd="10dp"
+    android:layout_marginStart="@dimen/item_horizontal_margin"
+    android:layout_marginEnd="@dimen/item_horizontal_margin"
     android:layout_marginBottom="@dimen/margin_small"
     android:background="@drawable/topic_viewholder_bg"
     android:outlineProvider="background">
@@ -32,12 +32,14 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|start"
         android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginBottom="16dp"
+        android:ellipsize="marquee"
         android:fontFamily="@font/helvetica_neue_medium"
         android:lineSpacingExtra="1sp"
+        android:maxLines="1"
         android:text="@string/seven_days_of_calm"
         android:textColor="@color/white"
-        android:maxLines="1"
         android:textSize="18sp"
         android:textStyle="bold" />
 </FrameLayout>

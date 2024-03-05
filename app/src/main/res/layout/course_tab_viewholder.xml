@@ -10,8 +10,8 @@
         android:layout_height="40dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin_small"
         android:importantForAccessibility="no"
         app:srcCompat="@drawable/play_selected" />
 
@@ -20,7 +20,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@id/play_button_course"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="@dimen/margin_small"
         android:layout_marginTop="2dp"
         android:layout_toEndOf="@id/play_button_course"
         android:fontFamily="@font/roboto_medium"
@@ -33,7 +33,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/play_button_course"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="@dimen/margin_small"
         android:layout_marginTop="6dp"
         android:layout_marginBottom="2dp"
         android:layout_toEndOf="@id/play_button_course"

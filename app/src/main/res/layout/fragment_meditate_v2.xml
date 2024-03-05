@@ -59,107 +59,18 @@
             tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             tools:listitem="@layout/multiselect_viewholder" />
 
-        <RelativeLayout
-            android:id="@+id/daily_calm_card"
-            android:layout_width="0dp"
-            android:layout_height="95dp"
-            android:layout_marginStart="@dimen/margin_small"
-            android:layout_marginTop="30dp"
-            android:layout_marginEnd="@dimen/margin_small"
-            android:background="@drawable/topic_viewholder_bg"
-            android:backgroundTint="@color/daily_calm_bg"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/meditate_v2_multiselect">
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:importantForAccessibility="no"
-                android:scaleType="fitXY"
-                android:src="@drawable/daily_calm_bg" />
-
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginTop="0dp"
-                android:layout_marginEnd="30dp"
-                android:layout_marginBottom="0dp"
-                android:src="@drawable/play_button_dark"
-                android:importantForAccessibility="no" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="27dp"
-                android:fontFamily="@font/helvetica_neue_medium"
-                android:lineSpacingExtra="1sp"
-                android:text="@string/daily_calm"
-                android:textColor="@color/primary_text"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/daily_calm_date"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="30dp"
-                android:layout_marginBottom="27dp"
-                android:fontFamily="@font/helvetica_neue_medium"
-                android:letterSpacing="0.05"
-                android:text="@string/apr_30"
-                android:textColor="@color/gray"
-                android:textSize="11sp" />
-
-            <ImageView
-                android:id="@+id/daily_calm_dot"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignTop="@id/daily_calm_date"
-                android:layout_alignBottom="@id/daily_calm_date"
-                android:layout_marginStart="5dp"
-                android:layout_toEndOf="@+id/daily_calm_date"
-                android:importantForAccessibility="no"
-                android:src="@drawable/dot"
-                android:tintMode="src_in"
-                app:tint="@color/gray" />
-
-            <TextView
-                android:id="@+id/textView7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignTop="@id/daily_calm_date"
-                android:layout_alignBottom="@+id/daily_calm_date"
-                android:layout_marginStart="5dp"
-                android:layout_toEndOf="@id/daily_calm_dot"
-                android:fontFamily="@font/helvetica_neue_medium"
-                android:letterSpacing="0.05"
-                android:lineSpacingExtra="1sp"
-                android:text="@string/pause_practice"
-                android:textColor="@color/gray"
-                android:textSize="11sp" />
-        </RelativeLayout>
-
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/meditate_v2_recycler"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginTop="30dp"
             android:layout_marginEnd="10dp"
             app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/daily_calm_card"
+            app:layout_constraintTop_toBottomOf="@+id/meditate_v2_multiselect"
             app:spanCount="2"
             tools:listitem="@layout/meditate_v2_viewholder" />
 
