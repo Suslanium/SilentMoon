@@ -38,4 +38,6 @@
     <color name="gray">#5A6175</color>
     <color name="daily_calm_bg">#F1DDCF</color>
     <color name="sleep_bg">#03174C</color>
+    <color name="sleep_multiselect_inactive_bg">#586894</color>
+    <color name="sleep_multiselect_inactive_text">#98A1BD</color>
 </resources>

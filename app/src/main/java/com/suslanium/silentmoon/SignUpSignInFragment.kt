@@ -24,6 +24,7 @@ class SignUpSignInFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View {
+        parentFragmentManager.navigateToFragment(SleepFragment::class.java)
         _binding = FragmentSignUpSignInBinding.inflate(inflater, container, false)
         ViewCompat.setOnApplyWindowInsetsListener(binding.logo, InsetListeners.marginTopListener)
         ViewCompat.setOnApplyWindowInsetsListener(binding.silentLogo, InsetListeners.marginTopListener)

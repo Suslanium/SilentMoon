@@ -95,4 +95,12 @@ to Silent Moon?</string>
     <string name="anxiety_release">Anxiety Release</string>
     <string name="welcome_sleep_title">Welcome To Sleep</string>
     <string name="welcome_sleep_subtitle">Explore the new kind of sleep. It uses sound and visualization to create perfect conditions for a refreshing sleep.</string>
+    <string name="sleep_title">Sleep Stories</string>
+    <string name="sleep_subtitle">Soothing bedtime stories to help you fall into a deep and natural sleep</string>
+    <string name="ocean_moon_title">The Ocean Moon</string>
+    <string name="ocean_moon_subtitle">Non-stop 8-hour mixes of our most popular sleep audio</string>
+    <string name="night_island">Night Island</string>
+    <string name="sweet_sleep">Sweet Sleep</string>
+    <string name="moon_clouds">Moon Clouds</string>
+    <string name="good_night">Good Night</string>
 </resources>
