@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="233dp"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
+    android:layout_marginBottom="@dimen/margin_small"
+    android:background="@drawable/topic_viewholder_bg"
+    android:backgroundTint="@color/sleep_bg">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:importantForAccessibility="no"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/ocean_moon_bg" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:importantForAccessibility="no"
+        app:srcCompat="@drawable/ocean_moon_lock" />
+
+    <TextView
+        android:id="@+id/ocean_moon_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="68dp"
+        android:fontFamily="@font/garamond_premier_pro_semibold"
+        android:gravity="center"
+        android:letterSpacing="0.02"
+        android:maxLines="1"
+        android:text="@string/ocean_moon_title"
+        android:textColor="@color/ocean_moon_title"
+        android:textSize="36sp" />
+
+    <TextView
+        android:id="@+id/ocean_moon_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ocean_moon_title"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="5dp"
+        android:breakStrategy="balanced"
+        android:fontFamily="@font/helvetica_neue_roman"
+        android:gravity="center"
+        android:lineSpacingExtra="4sp"
+        android:text="@string/ocean_moon_subtitle"
+        android:textColor="@color/ocean_moon_subtitle"
+        android:textSize="16sp" />
+
+    <Button
+        style="@style/primary_button"
+        android:layout_width="70dp"
+        android:layout_height="35dp"
+        android:layout_below="@+id/ocean_moon_subtitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/very_light_gray"
+        android:letterSpacing="0.05"
+        android:paddingLeft="0dp"
+        android:paddingRight="0dp"
+        android:text="@string/start"
+        android:textColor="@color/primary_text"
+        android:textSize="12sp" />
+</RelativeLayout>

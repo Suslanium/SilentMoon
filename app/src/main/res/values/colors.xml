@@ -39,5 +39,7 @@
     <color name="daily_calm_bg">#F1DDCF</color>
     <color name="sleep_bg">#03174C</color>
     <color name="sleep_multiselect_inactive_bg">#586894</color>
-    <color name="sleep_multiselect_inactive_text">#98A1BD</color>
+    <color name="sleep_secondary_text">#98A1BD</color>
+    <color name="ocean_moon_title">#FFE7BF</color>
+    <color name="ocean_moon_subtitle">#F9F9FF</color>
 </resources>

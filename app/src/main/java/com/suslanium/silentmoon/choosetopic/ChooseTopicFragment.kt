@@ -24,6 +24,7 @@ class ChooseTopicFragment : Fragment() {
     ): View {
         _binding = FragmentChooseTopicBinding.inflate(inflater, container, false)
         ViewCompat.setOnApplyWindowInsetsListener(binding.chooseTopicTitle, InsetListeners.marginTopListener)
+        ViewCompat.setOnApplyWindowInsetsListener(binding.chooseTopicRecyclerView, InsetListeners.paddingBottomListener)
         val viewManager = StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
         val viewAdapter = TopicAdapter(Topics.topicList, onItemClick = {
             parentFragmentManager.navigateToFragment(RemindersFragment::class.java)

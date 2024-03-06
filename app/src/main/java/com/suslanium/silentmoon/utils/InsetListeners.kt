@@ -4,6 +4,7 @@ import android.view.ViewGroup
 import androidx.core.view.OnApplyWindowInsetsListener
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.updateLayoutParams
+import androidx.core.view.updatePadding
 
 object InsetListeners {
     val marginTopBottomListener = OnApplyWindowInsetsListener { view, windowInsets ->
@@ -32,6 +33,14 @@ object InsetListeners {
         view.updateLayoutParams<ViewGroup.MarginLayoutParams> {
             bottomMargin = insets.bottom
         }
+
+        WindowInsetsCompat.CONSUMED
+    }
+
+    val paddingBottomListener = OnApplyWindowInsetsListener { view, windowInsets ->
+        val insets = windowInsets.getInsets(WindowInsetsCompat.Type.systemBars())
+
+        view.updatePadding(bottom = insets.bottom)
 
         WindowInsetsCompat.CONSUMED
     }

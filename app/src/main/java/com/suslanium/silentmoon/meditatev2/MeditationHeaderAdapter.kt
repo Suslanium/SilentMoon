@@ -1,6 +1,5 @@
 package com.suslanium.silentmoon.meditatev2
 
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,8 +8,6 @@ import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.suslanium.silentmoon.R
 
 class MeditationHeaderAdapter : RecyclerView.Adapter<MeditationHeaderAdapter.MeditationHeader>() {
-
-    private lateinit var context: Context
 
     inner class MeditationHeader(view: View) : RecyclerView.ViewHolder(view)
 
@@ -23,11 +20,6 @@ class MeditationHeaderAdapter : RecyclerView.Adapter<MeditationHeaderAdapter.Med
     override fun onBindViewHolder(holder: MeditationHeader, position: Int) {
         val layoutParams = holder.itemView.layoutParams as StaggeredGridLayoutManager.LayoutParams
         layoutParams.isFullSpan = true
-    }
-
-    override fun onAttachedToRecyclerView(recyclerView: RecyclerView) {
-        super.onAttachedToRecyclerView(recyclerView)
-        context = recyclerView.context
     }
 
 }

@@ -1,13 +1,19 @@
-package com.suslanium.silentmoon
+package com.suslanium.silentmoon.sleep
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.ConcatAdapter
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.GridLayoutManager.SpanSizeLookup
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.suslanium.silentmoon.R
 import com.suslanium.silentmoon.common.multiselect.MultiSelectAdapter
 import com.suslanium.silentmoon.common.multiselect.MultiSelectItems
+import com.suslanium.silentmoon.common.sleepmusic.SleepMusic
+import com.suslanium.silentmoon.common.sleepmusic.SleepMusicAdapter
 import com.suslanium.silentmoon.databinding.FragmentSleepBinding
 
 class SleepFragment : Fragment() {
@@ -16,8 +22,7 @@ class SleepFragment : Fragment() {
     private val binding get() = _binding!!
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View {
         _binding = FragmentSleepBinding.inflate(inflater, container, false)
 
@@ -26,14 +31,33 @@ class SleepFragment : Fragment() {
         val multiSelectViewAdapter = MultiSelectAdapter(
             items = MultiSelectItems.items,
             activeHolderTextColor = R.color.very_light_gray_variant,
-            inactiveTextColor = R.color.sleep_multiselect_inactive_text,
+            inactiveTextColor = R.color.sleep_secondary_text,
             chipIconColor = R.color.very_light_gray_variant,
-            chipBackgroundColorList = R.color.sleep_multiselect_bg)
+            chipBackgroundColorList = R.color.sleep_multiselect_bg
+        )
 
         binding.sleepMultiselect.apply {
             setHasFixedSize(true)
             layoutManager = multiSelectViewManager
             adapter = multiSelectViewAdapter
+        }
+
+        val viewManager = GridLayoutManager(requireContext(), 2)
+        viewManager.spanSizeLookup = object : SpanSizeLookup() {
+            override fun getSpanSize(position: Int): Int {
+                if (position == 0) return 2
+                return 1
+            }
+        }
+
+        val viewAdapter = SleepMusicAdapter(SleepMusic.list, {})
+
+        binding.sleepRecycler.apply {
+            setHasFixedSize(true)
+            layoutManager = viewManager
+            adapter = ConcatAdapter(
+                OceanMoonAdapter(), viewAdapter
+            )
         }
 
         return binding.root

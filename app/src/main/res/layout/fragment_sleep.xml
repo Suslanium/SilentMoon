@@ -5,18 +5,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/sleep_bg"
-    tools:context=".SleepFragment" >
+    tools:context=".sleep.SleepFragment" >
 
     <ImageView
         android:id="@+id/sleep_top_bg"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:adjustViewBounds="true"
+        android:importantForAccessibility="no"
+        android:scaleType="centerCrop"
         android:src="@drawable/sleep_top_bg"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:importantForAccessibility="no" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/sleep_title"
@@ -66,4 +67,16 @@
         app:layout_constraintTop_toBottomOf="@+id/sleep_subtitle"
         tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         tools:listitem="@layout/multiselect_viewholder" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/sleep_recycler"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sleep_multiselect" />
 </androidx.constraintlayout.widget.ConstraintLayout>
