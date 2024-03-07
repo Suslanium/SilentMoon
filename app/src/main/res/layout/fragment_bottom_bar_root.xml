@@ -1,29 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".BottomBarRootFragment"
-    android:orientation="vertical">
+    tools:context=".BottomBarRootFragment">
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/navigation_fragment_root"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
         android:name="com.suslanium.silentmoon.home.HomeFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_bar"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp"
         tools:layout="@layout/fragment_home">
 
     </androidx.fragment.app.FragmentContainerView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignBottom="@+id/navigation_fragment_root"
+        android:layout_marginBottom="-30dp"
+        android:background="@drawable/shadow"
+        android:backgroundTint="@color/black"
+        android:alpha="0.1"/>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:layout_weight="0"
+        android:layout_alignParentBottom="true"
         android:background="@color/white"
         app:elevation="8dp"
         app:itemActiveIndicatorStyle="@style/bottom_bar_indicator"
@@ -36,4 +46,4 @@
         app:itemTextColor="@color/bottom_bar_text_color"
         app:labelVisibilityMode="labeled"
         app:menu="@menu/bottom_navigation_menu" />
-</LinearLayout>
+</RelativeLayout>
