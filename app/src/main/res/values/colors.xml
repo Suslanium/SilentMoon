@@ -42,4 +42,5 @@
     <color name="sleep_secondary_text">#98A1BD</color>
     <color name="ocean_moon_title">#FFE7BF</color>
     <color name="ocean_moon_subtitle">#F9F9FF</color>
+    <color name="play_option_divider">#98A1BD</color>
 </resources>

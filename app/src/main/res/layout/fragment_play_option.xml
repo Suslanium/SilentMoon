@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar_play_option"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed|snap"
+            app:toolbarId="@id/toolbar_play_option">
+
+            <ImageView
+                android:id="@+id/app_bar_image_play_option"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:background="@color/sleep_bg"
+                android:importantForAccessibility="no"
+                android:src="@drawable/play_option_top_bg" />
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar_play_option"
+                android:layout_width="match_parent"
+                android:layout_height="0dp" />
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/sleep_bg"
+        android:fillViewport="true"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|snap|enterAlways">
+
+            <TextView
+                android:id="@+id/play_option_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/helvetica_neue_medium"
+                android:text="@string/night_island"
+                android:textColor="@color/very_light_gray_variant"
+                android:textSize="34sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/play_option_duration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/helvetica_neue_medium"
+                android:letterSpacing="0.05"
+                android:lineSpacingExtra="1sp"
+                android:text="@string/forty_five_min"
+                android:textColor="@color/play_option_divider"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/play_option_title" />
+
+            <ImageView
+                android:id="@+id/play_option_dot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:importantForAccessibility="no"
+                android:tintMode="src_in"
+                app:layout_constraintBottom_toBottomOf="@id/play_option_duration"
+                app:layout_constraintStart_toEndOf="@id/play_option_duration"
+                app:layout_constraintTop_toTopOf="@id/play_option_duration"
+                app:srcCompat="@drawable/dot"
+                app:tint="@color/play_option_divider" />
+
+            <TextView
+                android:id="@+id/play_option_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:fontFamily="@font/helvetica_neue_medium"
+                android:letterSpacing="0.05"
+                android:lineSpacingExtra="1sp"
+                android:text="@string/sleep_music"
+                android:textColor="@color/play_option_divider"
+                app:layout_constraintBottom_toBottomOf="@+id/play_option_duration"
+                app:layout_constraintStart_toEndOf="@+id/play_option_dot"
+                app:layout_constraintTop_toTopOf="@+id/play_option_duration" />
+
+            <TextView
+                android:id="@+id/play_option_description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_marginEnd="@dimen/margin_small"
+                android:fontFamily="@font/helvetica_neue_roman"
+                android:lineSpacingExtra="7sp"
+                android:text="@string/play_option_subtitle"
+                android:textColor="@color/play_option_divider"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/play_option_duration" />
+
+            <ImageView
+                android:id="@+id/play_option_fav_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_small"
+                android:importantForAccessibility="no"
+                app:layout_constraintBottom_toBottomOf="@id/play_option_fav_text"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/play_option_fav_text"
+                app:srcCompat="@drawable/heart_filled_icon_white" />
+
+            <TextView
+                android:id="@+id/play_option_fav_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="11dp"
+                android:layout_marginTop="31dp"
+                android:fontFamily="@font/helvetica_neue_medium"
+                android:lineSpacingExtra="1sp"
+                android:text="@string/course_details_favourites"
+                android:textColor="@color/very_light_gray_variant"
+                app:layout_constraintStart_toEndOf="@id/play_option_fav_icon"
+                app:layout_constraintTop_toBottomOf="@id/play_option_description" />
+
+            <TextView
+                android:id="@+id/play_option_listening_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="31dp"
+                android:layout_marginEnd="@dimen/margin_small"
+                android:fontFamily="@font/helvetica_neue_medium"
+                android:lineSpacingExtra="1sp"
+                android:text="@string/course_details_listening"
+                android:textColor="@color/very_light_gray_variant"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/play_option_description" />
+
+            <ImageView
+                android:id="@+id/play_option_listening_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="11dp"
+                android:importantForAccessibility="no"
+                app:layout_constraintBottom_toBottomOf="@id/play_option_listening_text"
+                app:layout_constraintEnd_toStartOf="@id/play_option_listening_text"
+                app:layout_constraintTop_toTopOf="@id/play_option_listening_text"
+                app:srcCompat="@drawable/headphones_icon_white" />
+
+            <TextView
+                android:id="@+id/play_option_narrator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/helvetica_neue_medium"
+                android:text="@string/related"
+                android:textColor="@color/very_light_gray_variant"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/course_details_divider" />
+
+
+            <View
+                android:id="@+id/course_details_divider"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="@dimen/margin_small"
+                android:alpha="0.15"
+                android:background="@color/play_option_divider"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/play_option_fav_icon" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/play_option_recycler"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_marginEnd="10dp"
+                android:paddingBottom="95dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/play_option_narrator" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fav_fab_play_option"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="90dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:importantForAccessibility="no"
+        android:src="@drawable/heart_icon"
+        app:backgroundTint="@color/course_details_fab_bg"
+        app:elevation="0dp"
+        app:fabCustomSize="55dp"
+        app:layout_anchor="@id/appbar_play_option"
+        app:layout_anchorGravity="top|right|end"
+        app:shapeAppearanceOverlay="@style/fab_shape"
+        app:tint="@null" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/download_fab_play_option"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="@dimen/margin_small"
+        android:clickable="true"
+        android:focusable="true"
+        android:importantForAccessibility="no"
+        android:src="@drawable/download_icon"
+        app:backgroundTint="@color/course_details_fab_bg"
+        app:elevation="0dp"
+        app:fabCustomSize="55dp"
+        app:layout_anchor="@id/appbar_play_option"
+        app:layout_anchorGravity="top|right|end"
+        app:shapeAppearanceOverlay="@style/fab_shape"
+        app:tint="@null" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/back_fab_play_option"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginTop="50dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:importantForAccessibility="no"
+        android:src="@drawable/back_arrow"
+        app:backgroundTint="@color/very_light_gray_variant"
+        app:elevation="0dp"
+        app:fabCustomSize="55dp"
+        app:layout_anchor="@id/appbar_play_option"
+        app:layout_anchorGravity="top|right|start"
+        app:maxImageSize="20dp"
+        app:shapeAppearanceOverlay="@style/fab_shape"
+        app:tint="@null" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="vertical">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="16dp"
+            android:background="@drawable/shadow"
+            android:backgroundTint="@color/sleep_bg"/>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="95dp"
+            android:background="@color/sleep_bg">
+
+            <Button
+                android:id="@+id/play_option_button"
+                style="@style/primary_button"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/text_field_height"
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_marginEnd="@dimen/margin_small"
+                android:text="@string/play"
+                android:layout_gravity="center_vertical"/>
+        </FrameLayout>
+        <View
+            android:id="@+id/play_option_bottom_navbar_margin"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@color/sleep_bg"/>
+    </LinearLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
