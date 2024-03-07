@@ -12,6 +12,7 @@ import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.fragment.app.Fragment
+import com.suslanium.silentmoon.coursedetails.CourseDetailsFragment
 import com.suslanium.silentmoon.databinding.FragmentSignUpSignInBinding
 import com.suslanium.silentmoon.utils.InsetListeners
 import com.suslanium.silentmoon.utils.navigateToFragment
@@ -24,7 +25,7 @@ class SignUpSignInFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View {
-        parentFragmentManager.navigateToFragment(MusicFragment::class.java)
+        parentFragmentManager.navigateToFragment(CourseDetailsFragment::class.java)
         _binding = FragmentSignUpSignInBinding.inflate(inflater, container, false)
         ViewCompat.setOnApplyWindowInsetsListener(binding.logo, InsetListeners.marginTopListener)
         ViewCompat.setOnApplyWindowInsetsListener(binding.silentLogo, InsetListeners.marginTopListener)
