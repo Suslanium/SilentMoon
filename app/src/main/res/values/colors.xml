@@ -28,7 +28,7 @@
     <color name="bottom_bar_inactive_color">#A0A3B1</color>
     <color name="relaxation_color">#FFC97E</color>
     <color name="daily_thought_bg">#333242</color>
-    <color name="course_details_fab_bg">#7F03174C</color>
+    <color name="semitransparent_fab_bg">#7F03174C</color>
     <color name="very_light_gray_variant">#E6E7F2</color>
     <color name="course_details_list_divider">#ADB8D9</color>
     <color name="course_details_divider">#E4E6FD</color>
@@ -42,5 +42,6 @@
     <color name="sleep_secondary_text">#98A1BD</color>
     <color name="ocean_moon_title">#FFE7BF</color>
     <color name="ocean_moon_subtitle">#F9F9FF</color>
-    <color name="play_option_divider">#98A1BD</color>
+    <color name="sleep_secondary_variant">#98A1BD</color>
+    <color name="music_progress_bar_background">#8047557E</color>
 </resources>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/background"
+        android:gravity="center_vertical|fill_horizontal">
+        <shape android:shape="rectangle"
+            android:tint="@color/music_progress_bar_background">
+            <corners android:radius="100dp" />
+            <size android:height="3dp" />
+            <solid android:color="@color/white" />
+        </shape>
+    </item>
+    <item android:id="@+id/secondaryProgress"
+        android:gravity="center_vertical|fill_horizontal">
+        <scale android:scaleWidth="100%">
+            <selector>
+                <item android:state_enabled="false"
+                    android:drawable="@color/transparent" />
+                <item>
+                    <shape android:shape="rectangle"
+                        android:tint="@color/very_light_gray_variant">
+                        <corners android:radius="100dp" />
+                        <size android:height="3dp" />
+                        <solid android:color="@color/white" />
+                    </shape>
+                </item>
+            </selector>
+        </scale>
+    </item>
+    <item android:id="@+id/progress"
+        android:gravity="center_vertical|fill_horizontal">
+        <scale android:scaleWidth="100%">
+            <selector>
+                <item android:state_enabled="false"
+                    android:drawable="@color/transparent" />
+                <item>
+                    <shape android:shape="rectangle"
+                        android:tint="@color/very_light_gray_variant">
+                        <corners android:radius="100dp" />
+                        <size android:height="3dp" />
+                        <solid android:color="@color/white" />
+                    </shape>
+                </item>
+            </selector>
+        </scale>
+    </item>
+</layer-list>

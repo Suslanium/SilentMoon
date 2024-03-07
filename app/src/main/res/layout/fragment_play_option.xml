@@ -71,7 +71,7 @@
                 android:letterSpacing="0.05"
                 android:lineSpacingExtra="1sp"
                 android:text="@string/forty_five_min"
-                android:textColor="@color/play_option_divider"
+                android:textColor="@color/sleep_secondary_variant"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/play_option_title" />
 
@@ -86,7 +86,7 @@
                 app:layout_constraintStart_toEndOf="@id/play_option_duration"
                 app:layout_constraintTop_toTopOf="@id/play_option_duration"
                 app:srcCompat="@drawable/dot"
-                app:tint="@color/play_option_divider" />
+                app:tint="@color/sleep_secondary_variant" />
 
             <TextView
                 android:id="@+id/play_option_type"
@@ -97,7 +97,7 @@
                 android:letterSpacing="0.05"
                 android:lineSpacingExtra="1sp"
                 android:text="@string/sleep_music"
-                android:textColor="@color/play_option_divider"
+                android:textColor="@color/sleep_secondary_variant"
                 app:layout_constraintBottom_toBottomOf="@+id/play_option_duration"
                 app:layout_constraintStart_toEndOf="@+id/play_option_dot"
                 app:layout_constraintTop_toTopOf="@+id/play_option_duration" />
@@ -112,7 +112,7 @@
                 android:fontFamily="@font/helvetica_neue_roman"
                 android:lineSpacingExtra="7sp"
                 android:text="@string/play_option_subtitle"
-                android:textColor="@color/play_option_divider"
+                android:textColor="@color/sleep_secondary_variant"
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
@@ -189,7 +189,7 @@
                 android:layout_marginTop="30dp"
                 android:layout_marginEnd="@dimen/margin_small"
                 android:alpha="0.15"
-                android:background="@color/play_option_divider"
+                android:background="@color/sleep_secondary_variant"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/play_option_fav_icon" />
@@ -220,7 +220,7 @@
         android:focusable="true"
         android:importantForAccessibility="no"
         android:src="@drawable/heart_icon"
-        app:backgroundTint="@color/course_details_fab_bg"
+        app:backgroundTint="@color/semitransparent_fab_bg"
         app:elevation="0dp"
         app:fabCustomSize="55dp"
         app:layout_anchor="@id/appbar_play_option"
@@ -238,7 +238,7 @@
         android:focusable="true"
         android:importantForAccessibility="no"
         android:src="@drawable/download_icon"
-        app:backgroundTint="@color/course_details_fab_bg"
+        app:backgroundTint="@color/semitransparent_fab_bg"
         app:elevation="0dp"
         app:fabCustomSize="55dp"
         app:layout_anchor="@id/appbar_play_option"
