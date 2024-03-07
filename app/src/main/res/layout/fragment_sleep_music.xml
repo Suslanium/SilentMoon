@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/sleep_bg"
+    tools:context=".SleepMusicFragment">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/back_fab_sleep_music"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginTop="50dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:importantForAccessibility="no"
+        android:src="@drawable/back_arrow"
+        app:backgroundTint="@color/very_light_gray_variant"
+        app:elevation="0dp"
+        app:fabCustomSize="55dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:maxImageSize="20dp"
+        app:shapeAppearanceOverlay="@style/fab_shape"
+        app:tint="@null" />
+
+    <TextView
+        android:id="@+id/sleep_music_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/helvetica_neue_medium"
+        android:lineSpacingExtra="1sp"
+        android:text="@string/sleep_music_lowercase"
+        android:textColor="@color/very_light_gray_variant"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/back_fab_sleep_music"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/back_fab_sleep_music" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/sleep_music_recycler"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/back_fab_sleep_music" />
+</androidx.constraintlayout.widget.ConstraintLayout>
