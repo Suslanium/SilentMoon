@@ -7,8 +7,8 @@ import com.suslanium.silentmoon.R
 fun FragmentManager.navigateToFragment(fragment: Class<out Fragment>, fragmentContainerViewId: Int = R.id.fragmentContainerView) = this.beginTransaction()
     .setReorderingAllowed(true).setCustomAnimations(
         R.anim.fragment_open_enter,
-        R.anim.fragment_close_exit,
-        R.anim.fragment_open_enter,
+        R.anim.still_close,
+        R.anim.none,
         R.anim.fragment_close_exit
-    ).add(fragmentContainerViewId, fragment, null)
+    ).replace(fragmentContainerViewId, fragment, null)
     .addToBackStack(null).commit()
