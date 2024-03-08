@@ -21,6 +21,7 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
+
         ViewCompat.setOnApplyWindowInsetsListener(
             binding.logoHome, InsetListeners.marginTopListener
         )
@@ -30,7 +31,13 @@ class HomeFragment : Fragment() {
         ViewCompat.setOnApplyWindowInsetsListener(
             binding.moonLogoHome, InsetListeners.marginTopListener
         )
+
         binding.basicsCard.setOnClickListener {
+            parentFragment?.parentFragmentManager?.navigateToFragment(
+                CourseDetailsFragment::class.java
+            )
+        }
+        binding.basicsStart.setOnClickListener {
             parentFragment?.parentFragmentManager?.navigateToFragment(
                 CourseDetailsFragment::class.java
             )
@@ -40,11 +47,17 @@ class HomeFragment : Fragment() {
                 CourseDetailsFragment::class.java
             )
         }
+        binding.relaxationStart.setOnClickListener {
+            parentFragment?.parentFragmentManager?.navigateToFragment(
+                CourseDetailsFragment::class.java
+            )
+        }
         binding.thoughtCard.setOnClickListener {
             parentFragment?.parentFragmentManager?.navigateToFragment(
                 CourseDetailsFragment::class.java
             )
         }
+
         val viewManager =
             LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
         val viewAdapter = RecommendationsAdapter(Recommendations.recommendationsList) {
@@ -57,6 +70,7 @@ class HomeFragment : Fragment() {
             layoutManager = viewManager
             adapter = viewAdapter
         }
+
         return binding.root
     }
 

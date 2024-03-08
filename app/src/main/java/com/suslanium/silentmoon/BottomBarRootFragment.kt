@@ -41,13 +41,21 @@ class BottomBarRootFragment : Fragment() {
             if (it.itemId == binding.bottomBar.selectedItemId) return@setOnItemSelectedListener false
             when (it.itemId) {
                 R.id.menu_home -> childFragmentManager.navigateToFragmentBottomBar(HomeFragment::class.java)
+
                 R.id.menu_sleep -> {
                     parentFragmentManager.navigateToFragment(WelcomeSleepFragment::class.java)
                     childFragmentManager.navigateToFragmentBottomBar(SleepFragment::class.java)
                 }
-                R.id.menu_meditate -> childFragmentManager.navigateToFragmentBottomBar(MeditateV2Fragment::class.java)
+
+                R.id.menu_meditate -> childFragmentManager.navigateToFragmentBottomBar(
+                    MeditateV2Fragment::class.java
+                )
+
                 R.id.menu_music -> parentFragmentManager.navigateToFragment(MusicV2Fragment::class.java)
-                R.id.menu_profile -> childFragmentManager.navigateToFragmentBottomBar(ProfileFragment::class.java)
+
+                R.id.menu_profile -> childFragmentManager.navigateToFragmentBottomBar(
+                    ProfileFragment::class.java
+                )
             }
             return@setOnItemSelectedListener false
         }
@@ -71,7 +79,10 @@ class BottomBarRootFragment : Fragment() {
     override fun onResume() {
         super.onResume()
         backCallback = requireActivity().onBackPressedDispatcher.addCallback {
-            childFragmentManager.popBackStack()
+            if (childFragmentManager.backStackEntryCount > 0)
+                childFragmentManager.popBackStack()
+            else
+                activity?.finish()
         }
     }
 

@@ -132,6 +132,7 @@
                 android:textSize="11sp" />
 
             <Button
+                android:id="@+id/basics_start"
                 style="@style/primary_button"
                 android:layout_width="70dp"
                 android:layout_height="35dp"
@@ -139,12 +140,12 @@
                 android:layout_marginEnd="7dp"
                 android:layout_marginBottom="15dp"
                 android:backgroundTint="@color/very_light_gray"
+                android:letterSpacing="0.05"
                 android:paddingLeft="0dp"
                 android:paddingRight="0dp"
                 android:text="@string/start"
                 android:textColor="@color/primary_text"
-                android:textSize="12sp"
-                android:letterSpacing="0.05"/>
+                android:textSize="12sp" />
         </FrameLayout>
 
         <FrameLayout
@@ -203,6 +204,7 @@
                 android:textSize="11sp" />
 
             <Button
+                android:id="@+id/relaxation_start"
                 style="@style/primary_button"
                 android:layout_width="70dp"
                 android:layout_height="35dp"
@@ -210,12 +212,12 @@
                 android:layout_marginEnd="7dp"
                 android:layout_marginBottom="15dp"
                 android:backgroundTint="@color/primary_text"
+                android:letterSpacing="0.05"
                 android:paddingLeft="0dp"
                 android:paddingRight="0dp"
                 android:text="@string/start"
                 android:textColor="@color/ultra_light_gray"
-                android:textSize="12sp"
-                android:letterSpacing="0.05"/>
+                android:textSize="12sp" />
         </FrameLayout>
 
         <FrameLayout

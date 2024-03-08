@@ -59,6 +59,7 @@
         android:textSize="16sp" />
 
     <Button
+        android:id="@+id/ocean_moon_start"
         style="@style/primary_button"
         android:layout_width="70dp"
         android:layout_height="35dp"
