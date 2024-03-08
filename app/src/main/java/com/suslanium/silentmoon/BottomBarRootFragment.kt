@@ -163,6 +163,9 @@ class BottomBarRootFragment : Fragment() {
             binding.bottomBar.itemIconTintList =
                 requireContext().getColorStateList(R.color.bottom_bar_icon_color_dark)
 
+            binding.bottomBarShadow.backgroundTintList = requireContext().getColorStateList(R.color.sleep_bg)
+            binding.bottomBarShadow.alpha = 1f
+
             val animationEndColor = requireContext().getColor(R.color.sleep_bg)
 
             if (!immediateTransition) animateThemeColorChange(animationStartColor, animationEndColor)
@@ -172,6 +175,9 @@ class BottomBarRootFragment : Fragment() {
                 requireContext().getColorStateList(R.color.bottom_bar_text_color)
             binding.bottomBar.itemIconTintList =
                 requireContext().getColorStateList(R.color.bottom_bar_icon_color)
+
+            binding.bottomBarShadow.backgroundTintList = requireContext().getColorStateList(R.color.black)
+            binding.bottomBarShadow.alpha = 0.1f
 
             val animationEndColor = requireContext().getColor(R.color.white)
 
