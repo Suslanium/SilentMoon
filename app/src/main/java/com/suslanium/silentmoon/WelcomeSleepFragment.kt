@@ -20,6 +20,9 @@ class WelcomeSleepFragment : Fragment() {
     ): View {
         _binding = FragmentWelcomeSleepBinding.inflate(inflater, container, false)
         ViewCompat.setOnApplyWindowInsetsListener(binding.welcomeSleepGetStarted, InsetListeners.marginBottomListener)
+        binding.welcomeSleepGetStarted.setOnClickListener {
+            parentFragmentManager.popBackStack()
+        }
         return binding.root
     }
 

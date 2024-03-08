@@ -11,6 +11,7 @@ import com.suslanium.silentmoon.common.sleepmusic.SleepMusic
 import com.suslanium.silentmoon.common.sleepmusic.SleepMusicAdapter
 import com.suslanium.silentmoon.databinding.FragmentPlayOptionBinding
 import com.suslanium.silentmoon.utils.InsetListeners
+import com.suslanium.silentmoon.utils.navigateToFragment
 
 class PlayOptionFragment : Fragment() {
 
@@ -27,12 +28,20 @@ class PlayOptionFragment : Fragment() {
         ViewCompat.setOnApplyWindowInsetsListener(binding.playOptionBottomNavbarMargin, InsetListeners.heightBottomListener)
 
         val viewManager = GridLayoutManager(requireContext(), 2)
-        val viewAdapter = SleepMusicAdapter(SleepMusic.list, {})
+        val viewAdapter = SleepMusicAdapter(SleepMusic.list) {}
 
         binding.playOptionRecycler.apply {
             setHasFixedSize(true)
             layoutManager = viewManager
             adapter = viewAdapter
+        }
+
+        binding.playOptionButton.setOnClickListener {
+            parentFragmentManager.navigateToFragment(MusicFragment::class.java)
+        }
+
+        binding.backFabPlayOption.setOnClickListener {
+            parentFragmentManager.popBackStack()
         }
 
         return binding.root

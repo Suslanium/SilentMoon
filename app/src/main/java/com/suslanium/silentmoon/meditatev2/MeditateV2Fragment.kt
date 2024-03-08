@@ -10,7 +10,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.suslanium.silentmoon.common.multiselect.MultiSelectAdapter
 import com.suslanium.silentmoon.common.multiselect.MultiSelectItems
+import com.suslanium.silentmoon.coursedetails.CourseDetailsFragment
 import com.suslanium.silentmoon.databinding.FragmentMeditateV2Binding
+import com.suslanium.silentmoon.utils.navigateToFragment
 
 class MeditateV2Fragment : Fragment() {
 
@@ -39,7 +41,9 @@ class MeditateV2Fragment : Fragment() {
         binding.meditateV2Recycler.apply {
             setHasFixedSize(true)
             layoutManager = meditationViewManager
-            adapter = ConcatAdapter(MeditationHeaderAdapter(), meditationViewAdapter)
+            adapter = ConcatAdapter(MeditationHeaderAdapter(onHeaderClick = {
+                parentFragment?.parentFragmentManager?.navigateToFragment(CourseDetailsFragment::class.java)
+            }), meditationViewAdapter)
         }
 
         return binding.root

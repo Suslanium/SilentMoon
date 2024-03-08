@@ -6,11 +6,12 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.suslanium.silentmoon.R
 
-class OceanMoonAdapter : RecyclerView.Adapter<OceanMoonAdapter.OceanMoon>() {
+class OceanMoonAdapter(private val onCardPress: () -> Unit) : RecyclerView.Adapter<OceanMoonAdapter.OceanMoon>() {
 
     inner class OceanMoon(view: View) : RecyclerView.ViewHolder(view) {
         init {
             view.clipToOutline = true
+            view.setOnClickListener { onCardPress() }
         }
     }
 

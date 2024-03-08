@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.suslanium.silentmoon.common.sleepmusic.SleepMusic
 import com.suslanium.silentmoon.common.sleepmusic.SleepMusicAdapter
 import com.suslanium.silentmoon.databinding.FragmentSleepMusicBinding
+import com.suslanium.silentmoon.utils.navigateToFragment
 
 class SleepMusicFragment : Fragment() {
 
@@ -22,7 +23,9 @@ class SleepMusicFragment : Fragment() {
         _binding = FragmentSleepMusicBinding.inflate(inflater, container, false)
 
         val viewManager = GridLayoutManager(requireContext(), 2)
-        val viewAdapter = SleepMusicAdapter(SleepMusic.list, {})
+        val viewAdapter = SleepMusicAdapter(SleepMusic.list) {
+            parentFragment?.parentFragmentManager?.navigateToFragment(PlayOptionFragment::class.java)
+        }
 
         binding.sleepMusicRecycler.apply {
             setHasFixedSize(true)
@@ -30,6 +33,16 @@ class SleepMusicFragment : Fragment() {
             adapter = viewAdapter
         }
 
+        binding.backFabSleepMusic.setOnClickListener {
+            parentFragmentManager.popBackStack()
+        }
+
         return binding.root
     }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
+
 }

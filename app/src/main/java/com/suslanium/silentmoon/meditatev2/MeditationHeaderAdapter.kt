@@ -7,9 +7,15 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.suslanium.silentmoon.R
 
-class MeditationHeaderAdapter : RecyclerView.Adapter<MeditationHeaderAdapter.MeditationHeader>() {
+class MeditationHeaderAdapter(private val onHeaderClick: () -> Unit) : RecyclerView.Adapter<MeditationHeaderAdapter.MeditationHeader>() {
 
-    inner class MeditationHeader(view: View) : RecyclerView.ViewHolder(view)
+    inner class MeditationHeader(view: View) : RecyclerView.ViewHolder(view) {
+        init {
+            view.setOnClickListener {
+                onHeaderClick()
+            }
+        }
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = MeditationHeader(
         LayoutInflater.from(parent.context).inflate(R.layout.daily_calm_card, parent, false)

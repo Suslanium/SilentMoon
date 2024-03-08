@@ -12,3 +12,12 @@ fun FragmentManager.navigateToFragment(fragment: Class<out Fragment>, fragmentCo
         R.anim.fragment_close_exit
     ).replace(fragmentContainerViewId, fragment, null)
     .addToBackStack(null).commit()
+
+fun FragmentManager.navigateToFragmentBottomBar(fragment: Class<out Fragment>, fragmentContainerViewId: Int = R.id.navigation_fragment_root) = this.beginTransaction()
+    .setReorderingAllowed(true).setCustomAnimations(
+        com.google.android.material.R.anim.abc_fade_in,
+        com.google.android.material.R.anim.abc_fade_out,
+        com.google.android.material.R.anim.abc_fade_in,
+        com.google.android.material.R.anim.abc_fade_out,
+    ).replace(fragmentContainerViewId, fragment, null)
+    .addToBackStack(null).commit()

@@ -9,12 +9,16 @@ import androidx.recyclerview.widget.ConcatAdapter
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.GridLayoutManager.SpanSizeLookup
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.suslanium.silentmoon.PlayOptionFragment
 import com.suslanium.silentmoon.R
+import com.suslanium.silentmoon.SleepMusicFragment
 import com.suslanium.silentmoon.common.multiselect.MultiSelectAdapter
 import com.suslanium.silentmoon.common.multiselect.MultiSelectItems
 import com.suslanium.silentmoon.common.sleepmusic.SleepMusic
 import com.suslanium.silentmoon.common.sleepmusic.SleepMusicAdapter
 import com.suslanium.silentmoon.databinding.FragmentSleepBinding
+import com.suslanium.silentmoon.utils.navigateToFragment
+import com.suslanium.silentmoon.utils.navigateToFragmentBottomBar
 
 class SleepFragment : Fragment() {
 
@@ -50,13 +54,17 @@ class SleepFragment : Fragment() {
             }
         }
 
-        val viewAdapter = SleepMusicAdapter(SleepMusic.list, {})
+        val viewAdapter = SleepMusicAdapter(SleepMusic.list) {
+            parentFragment?.parentFragmentManager?.navigateToFragment(PlayOptionFragment::class.java)
+        }
 
         binding.sleepRecycler.apply {
             setHasFixedSize(true)
             layoutManager = viewManager
             adapter = ConcatAdapter(
-                OceanMoonAdapter(), viewAdapter
+                OceanMoonAdapter(onCardPress = {
+                    parentFragmentManager.navigateToFragmentBottomBar(SleepMusicFragment::class.java)
+                }), viewAdapter
             )
         }
 
