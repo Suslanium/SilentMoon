@@ -20,6 +20,7 @@
     </androidx.fragment.app.FragmentContainerView>
 
     <View
+        android:id="@+id/bottom_bar_shadow"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_alignBottom="@+id/navigation_fragment_root"
